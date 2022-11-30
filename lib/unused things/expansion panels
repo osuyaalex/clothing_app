@@ -1,0 +1,1326 @@
+SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 35),
+            child: ExpansionPanelList(
+              elevation: 0,
+              dividerColor: Colors.transparent,
+              children: [
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('New',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenClothing();
+                              }));
+                            },
+                            child: Text('Clothing',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenShoes();
+                              }));
+                            },
+                            child: Text('Shoes',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenTankTops();
+                              }));
+                            },
+                            child: Text('TankTops',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[0]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Clothing',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenClothingShirts();
+                              }));
+                            },
+                            child: Text('Shirts',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenClothingJeans();
+                              }));
+                            },
+                            child: Text('Jeans',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenClothingJoggers();
+                              }));
+                            },
+                            child: Text('Joggers',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[1]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Shoes',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenShoesBoots();
+                              }));
+                            },
+                            child: Text('Boots',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenShoesSandals();
+                              }));
+                            },
+                            child: Text('Sandals',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenShoesTrainers();
+                              }));
+                            },
+                            child: Text('Trainers',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[2]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Bag',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenBagSchool();
+                              }));
+                            },
+                            child: Text('School',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenBagWork();
+                              }));
+                            },
+                            child: Text('Work',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenBagHiking();
+                              }));
+                            },
+                            child: Text('Hiking',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[3]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Accessories',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenAccessoriesBeanies();
+                              }));
+                            },
+                            child: Text('Beanies',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenAccessoriesBelts();
+                              }));
+                            },
+                            child: Text('Belts',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenAccessoriesCaps();
+                              }));
+                            },
+                            child: Text('Caps',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[4]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Beauty',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenBeautyBodyCare();
+                              }));
+                            },
+                            child: Text('Body Care',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenBeautyHairCare();
+                              }));
+                            },
+                            child: Text('Hair Care',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const MenBeautyMakeUp();
+                              }));
+                            },
+                            child: Text('Make Up',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[5]
+                ),
+              ],
+              expansionCallback: (i, isOpen){
+                setState(() {
+                  _isOpen[i] = !isOpen;
+                });
+              },
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(34.0),
+            child: Row(
+              children: [
+                SvgPicture.asset('assets/iconImages/Call.svg'),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text('07068808118',
+                  style: GoogleFonts.tenorSans(
+                    fontSize: 20,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 34.0),
+            child: Row(
+              children: [
+                SvgPicture.asset('assets/iconImages/Location.svg'),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text('Store Locator',
+                  style: GoogleFonts.tenorSans(
+                    fontSize: 20,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          SvgPicture.asset('assets/iconImages/Devider.svg'),
+          const SizedBox(
+            height: 35,
+          ),
+          SvgPicture.asset('assets/iconImages/Social.svg'),
+        ],
+      ),
+    );
+
+
+
+
+
+SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 35),
+            child: ExpansionPanelList(
+              elevation: 0,
+              dividerColor: Colors.transparent,
+              children: [
+                ExpansionPanel(
+                  backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('New',
+                        style: GoogleFonts.tenorSans(
+                          fontSize: 20,
+                          color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context){
+                                  return const WomenDresses();
+                                }));
+                              },
+                              child: Text('Dresses',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenTop();
+                              }));
+                            },
+                            child: Text('Tops',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenShoes();
+                              }));
+                            },
+                            child: Text('Shoes',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  isExpanded: _isOpen[0]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Apparel',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelOuter();
+                              }));
+                            },
+                            child: Text('Outer',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanAparelDress();
+                              }));
+                            },
+                            child: Text('Dress',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelBlouse();
+                              }));
+                            },
+                            child: Text('Blouse',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelTShirt();
+                              }));
+                            },
+                            child: Text('T-Shirt',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelKnitWear();
+                              }));
+                            },
+                            child: Text('KnitWear',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelSkirt();
+                              }));
+                            },
+                            child: Text('Skirt',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelPants();
+                              }));
+                            },
+                            child: Text('Pants',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelDenim();
+                              }));
+                            },
+                            child: Text('Denim',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomanApparelKids();
+                              }));
+                            },
+                            child: Text('Kids',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[1]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Shoes',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      );
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenShoesBoots();
+                              }));
+                            },
+                            child: Text('Boots',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenShoesHeels();
+                              }));
+                            },
+                            child: Text('Heels',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenShoesTrainers();
+                              }));
+                            },
+                            child: Text('Trainers',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[2]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Bag',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      ),;
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenBagSchool();
+                              }));
+                            },
+                            child: Text('School',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenBagWork();
+                              }));
+                            },
+                            child: Text('Work',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenBagHiking();
+                              }));
+                            },
+                            child: Text('Hiking',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[3]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Accessories',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      ),;
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenAccessoriesBeanies();
+                              }));
+                            },
+                            child: Text('Beanies',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenAccessoriesBelts();
+                              }));
+                            },
+                            child: Text('Belts',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenAccessoriesCaps();
+                              }));
+                            },
+                            child: Text('Caps',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[4]
+                ),
+                ExpansionPanel(
+                    backgroundColor:Color(0xfffafafb),
+                    headerBuilder: (context, isOpen){
+                      return Text('Beauty',
+                        style: GoogleFonts.tenorSans(
+                            fontSize: 20,
+                            color: Colors.black
+                        ),
+                      ),;
+                    },
+                    body: Padding(
+                      padding: const EdgeInsets.only(right: 250.0),
+                      child: Column(
+                        children: [
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenBeautyBodyCare();
+                              }));
+                            },
+                            child: Text('Body Care',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenBeautyHairCare();
+                              }));
+                            },
+                            child: Text('Hair Care',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return const WomenBeautyMakeUp();
+                              }));
+                            },
+                            child: Text('Make Up',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    isExpanded: _isOpen[5]
+                ),
+              ],
+              expansionCallback: (i, isOpen){
+                setState(() {
+                  _isOpen[i] = !isOpen;
+                });
+              },
+            ),
+          ),
+           const SizedBox(
+             height: 10,
+           ),
+           Padding(
+             padding: const EdgeInsets.all(34.0),
+             child: Row(
+               children: [
+                 SvgPicture.asset('assets/iconImages/Call.svg'),
+                 const SizedBox(
+                   width: 10,
+                 ),
+                 Text('07068808118',
+                   style: GoogleFonts.tenorSans(
+                     fontSize: 20,
+                   ),
+                 ),
+               ],
+             ),
+           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 34.0),
+            child: Row(
+              children: [
+                SvgPicture.asset('assets/iconImages/Location.svg'),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text('Store Locator',
+                  style: GoogleFonts.tenorSans(
+                    fontSize: 20,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          SvgPicture.asset('assets/iconImages/Devider.svg'),
+          const SizedBox(
+            height: 35,
+          ),
+          SvgPicture.asset('assets/iconImages/Social.svg'),
+        ],
+      ),
+    );
+
+
+
+
+
+
+
+
+
+
+    SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 35),
+                child: ExpansionPanelList(
+                  elevation: 0,
+                  dividerColor: Colors.transparent,
+                  children: [
+                    ExpansionPanel(
+                        backgroundColor:Color(0xfffafafb),
+                        headerBuilder: (context, isOpen){
+                          return Text('New',
+                            style: GoogleFonts.tenorSans(
+                                fontSize: 20,
+                                color: Colors.black
+                            ),
+                          ),;
+                        },
+                        body: Padding(
+                          padding: const EdgeInsets.only(right: 250.0),
+                          child: Column(
+                            children: [
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsClothing();
+                                  }));
+                                },
+                                child: Text('Clothing',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsShoes();
+                                  }));
+                                },
+                                child: Text('Shoes',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsShoes();
+                                  }));
+                                },
+                                child: Text('Shoes',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        isExpanded: _isOpen[0]
+                    ),
+                    ExpansionPanel(
+                        backgroundColor:Color(0xfffafafb),
+                        headerBuilder: (context, isOpen){
+                          return Text('Clothing',
+                            style: GoogleFonts.tenorSans(
+                                fontSize: 20,
+                                color: Colors.black
+                            ),
+                          ),;
+                        },
+                        body: Padding(
+                          padding: const EdgeInsets.only(right: 250.0),
+                          child: Column(
+                            children: [
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsClothingShirts();
+                                  }));
+                                },
+                                child: Text('Shirts',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsClothingJeans();
+                                  }));
+                                },
+                                child: Text('Jeans',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsClothingJoggers();
+                                  }));
+                                },
+                                child: Text('Joggers',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        isExpanded: _isOpen[1]
+                    ),
+                    ExpansionPanel(
+                        backgroundColor:Color(0xfffafafb),
+                        headerBuilder: (context, isOpen){
+                          return Text('Shoes',
+                            style: GoogleFonts.tenorSans(
+                                fontSize: 20,
+                                color: Colors.black
+                            ),
+                          ),;
+                        },
+                        body: Padding(
+                          padding: const EdgeInsets.only(right: 250.0),
+                          child: Column(
+                            children: [
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsShoesBoots();
+                                  }));
+                                },
+                                child: Text('Boots',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsShoesSandals();
+                                  }));
+                                },
+                                child: Text('Sandals',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsShoesTrainers();
+                                  }));
+                                },
+                                child: Text('Trainers',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        isExpanded: _isOpen[2]
+                    ),
+                    ExpansionPanel(
+                        backgroundColor:Color(0xfffafafb),
+                        headerBuilder: (context, isOpen){
+                          return Text('Bag',
+                            style: GoogleFonts.tenorSans(
+                                fontSize: 20,
+                                color: Colors.black
+                            ),
+                          ),;
+                        },
+                        body: Padding(
+                          padding: const EdgeInsets.only(right: 250.0),
+                          child: Column(
+                            children: [
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsBagSchool();
+                                  }));
+                                },
+                                child: Text('School',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsBagEvents();
+                                  }));
+                                },
+                                child: Text('Events',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsBagSports();
+                                  }));
+                                },
+                                child: Text('Sports',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        isExpanded: _isOpen[3]
+                    ),
+                    ExpansionPanel(
+                        backgroundColor:Color(0xfffafafb),
+                        headerBuilder: (context, isOpen){
+                          return Text('Accessories',
+                            style: GoogleFonts.tenorSans(
+                                fontSize: 20,
+                                color: Colors.black
+                            ),
+                          ),;
+                        },
+                        body: Padding(
+                          padding: const EdgeInsets.only(right: 250.0),
+                          child: Column(
+                            children: [
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsAccessoriesBeanies();
+                                  }));
+                                },
+                                child: Text('Beanies',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsAccessoriesBelts();
+                                  }));
+                                },
+                                child: Text('Belts',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsAccessoriesCaps();
+                                  }));
+                                },
+                                child: Text('Caps',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        isExpanded: _isOpen[4]
+                    ),
+                    ExpansionPanel(
+                        backgroundColor:Color(0xfffafafb),
+                        headerBuilder: (context, isOpen){
+                          return Text('Beauty',
+                            style: GoogleFonts.tenorSans(
+                                fontSize: 20,
+                                color: Colors.black
+                            ),
+                          );
+                        },
+                        body: Padding(
+                          padding: const EdgeInsets.only(right: 250.0),
+                          child: Column(
+                            children: [
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsBeautyBodyCare();
+                                  }));
+                                },
+                                child: Text('Body Care',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsBeautyHairCare();
+                                  }));
+                                },
+                                child: Text('Hair Care',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return const KidsBeautyMakeUp();
+                                  }));
+                                },
+                                child: Text('Make Up',
+                                  style: GoogleFonts.tenorSans(
+                                      fontSize: 20,
+                                      color: Colors.black
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        isExpanded: _isOpen[5]
+                    ),
+                  ],
+                  expansionCallback: (i, isOpen){
+                    setState(() {
+                      _isOpen[i] = !isOpen;
+                    });
+                  },
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(34.0),
+                child: Row(
+                  children: [
+                    SvgPicture.asset('assets/iconImages/Call.svg'),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text('07068808118',
+                      style: GoogleFonts.tenorSans(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 34.0),
+                child: Row(
+                  children: [
+                    SvgPicture.asset('assets/iconImages/Location.svg'),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text('Store Locator',
+                      style: GoogleFonts.tenorSans(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              SvgPicture.asset('assets/iconImages/Devider.svg'),
+              const SizedBox(
+                height: 35,
+              ),
+              SvgPicture.asset('assets/iconImages/Social.svg'),
+            ],
+          ),
+        );

@@ -1,0 +1,174 @@
+package:clothing_app/drawer/drop%20down%20menu/women%20drop/drop_down.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/blouse.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/denim.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/dress.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/knitwear.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/outer.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/pants.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/skirt.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/apparel/tshirt.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/bag/hiking.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/bag/school.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/bag/work.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/new/shoes.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/menu/new/tops.dart';
+import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/women%20list/women_list.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'menu/apparel/kids.dart';
+import 'menu/new/dresses.dart';
+
+class WomenDrop extends StatefulWidget {
+   const WomenDrop({Key? key}) : super(key: key);
+
+  @override
+  State<WomenDrop> createState() => _WomenDropState();
+}
+
+class _WomenDropState extends State<WomenDrop> {
+   String _newItem = 'New';
+   String _apparelItem = 'Apparel';
+   String _bagItem = 'Bag';
+
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton2(
+              iconOnClick: SvgPicture.asset('assets/iconImages/Back.svg'),
+              dropdownOverButton: true,
+              alignment: AlignmentDirectional.topStart,
+              dropdownElevation: 0,
+              isDense: true,
+                style: GoogleFonts.tenorSans(
+                    fontSize: 20,
+                    color: Colors.black
+                ),
+              //menuMaxHeight: MediaQuery.of(context).size.height,
+              isExpanded: true,
+              value: _newItem,
+                icon: SvgPicture.asset('assets/iconImages/Forward.svg'),
+                items: nnew.map<DropdownMenuItem>((value){
+                  return DropdownMenuItem(
+                    value: value,
+                    child: Text(value),
+
+                  );
+                }).toList() ,
+                onChanged: (newValue){
+
+                if(newValue != _newItem){
+                  switch(newValue){
+                    case'Dresses':   Navigator.of(context).pushNamedAndRemoveUntil(WomenDresses.routeName, (route) => false);
+                    break;
+                    case 'Tops': Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return const WomenTop();
+                    }));
+                    break;
+                    case 'Shoes': Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return const WomenShoes();
+                    }));
+                  }
+                }
+                setState(() {
+                  _newItem = newValue;
+                });
+                }
+            ),
+          ),
+        ),
+        DropDown(
+            value: _apparelItem,
+            items: apparel.map<DropdownMenuItem>((val){
+              return DropdownMenuItem(
+                value: val,
+                    child: Text(val),
+              );
+            }).toList(),
+            change: (apparelValue){
+              if(apparelValue != _apparelItem){
+                switch(apparelValue){
+                  case 'Outer': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Outer();
+                  }));
+                  break;
+                  case 'Dress': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Dress();
+                  }));
+                  break;
+                  case 'Blouse/Shirt': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Blouse();
+                  }));
+                  break;
+                  case 'T-shirt': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const TShirt();
+                  }));
+                  break;
+                  case 'Knitwear': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const KnitWear();
+                  }));
+                  break;
+                  case 'Skirt': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Skirt();
+                  }));
+                  break;
+                  case 'Pants': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Pants();
+                  }));
+                  break;
+                  case 'Denim': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Denim();
+                  }));
+                  break;
+                  case 'Kids': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Kids();
+                  }));
+                }
+              }
+              setState(() {
+                _apparelItem=apparelValue;
+              });
+            }
+        ),
+        DropDown(
+            value: _bagItem,
+            items: bag.map<DropdownMenuItem>((value){
+              return DropdownMenuItem(
+                value: value,
+                  child: Text(value)
+              );
+            }).toList(),
+            change: (bagValue){
+              if(bagValue != _bagItem){
+                switch(bagValue){
+                  case'School' :Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const School();
+                  }));
+                  break;
+                  case 'Work': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Work();
+                  }));
+                  break;
+                  case 'Hiking': Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const Hiking();
+                  }));
+                }
+              }
+              setState(() {
+                _bagItem = bagValue;
+              });
+            }
+        )
+      ],
+    );
+  }
+}
