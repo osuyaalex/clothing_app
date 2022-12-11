@@ -352,7 +352,139 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
                   const SizedBox(
                     height: 50,
                   ),
-                  Image.asset('assets/iconImages/Openfashion.png')
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 500,
+                    decoration: BoxDecoration(
+                        color: Color(0xffEBEEF2),
+                      border: Border(
+                        top: BorderSide(
+                          color: Colors.black
+                        ),
+                        left: BorderSide(
+                            color: Colors.black
+                        ),
+                        right: BorderSide(
+                            color: Colors.black
+                        ),
+                        bottom: BorderSide(
+                            color: Colors.black
+                        ),
+                      )
+                    ),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 35,
+                        ),
+                        SvgPicture.asset('assets/iconImages/LogoCont.svg'),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SvgPicture.asset('assets/iconImages/Sentence.svg'),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        SvgPicture.asset('assets/iconImages/5.svg'),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset('assets/iconImages/M Sticker.png'),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                SvgPicture.asset('assets/iconImages/smalls.svg'),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Image.asset('assets/iconImages/Mi Sticker.png'),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                SvgPicture.asset('assets/iconImages/smallss.svg'),
+                              ],
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              children: [
+                                Image.asset('assets/iconImages/Mir Sticker.png'),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                SvgPicture.asset('assets/iconImages/smallsss.svg'),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Image.asset('assets/iconImages/Miro Sticker.png'),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                SvgPicture.asset('assets/iconImages/smallssss.svg'),
+                              ],
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 35,
+                        ),
+                        SvgPicture.asset('assets/iconImages/curve.svg'),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  SvgPicture.asset('assets/iconImages/Follow Us (1).svg'),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SvgPicture.asset('assets/iconImages/Instagram.svg'),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset('assets/iconImages/Group 257.png'),
+
+                        Image.asset('assets/iconImages/Group 258.png'),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset('assets/iconImages/Group 259.png'),
+
+                        Image.asset('assets/iconImages/Group 260.png'),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  SvgPicture.asset('assets/iconImages/Foot.svg'),
                 ],
               ),
             );

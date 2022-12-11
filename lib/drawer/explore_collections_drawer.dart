@@ -3,14 +3,15 @@ import 'dart:convert';
 import 'package:clothing_app/drawer/drop%20down%20menu/kids/kids_drop.dart';
 import 'package:clothing_app/drawer/drop%20down%20menu/men%20drop/men_drop.dart';
 import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/women_drop.dart';
-import 'package:clothing_app/network/network.dart';
+import 'package:clothing_app/network/category%20network/listchildren.dart';
+import 'package:clothing_app/network/category%20network/network.dart';
 import 'package:clothing_app/title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../network/model.dart';
+import '../network/category network/model.dart';
 
 
 
@@ -23,18 +24,28 @@ class ExploreCollectionsDrawer extends StatefulWidget {
 }
 
 class _ExploreCollectionsDrawerState extends State<ExploreCollectionsDrawer> {
-  late Future<Product> newProducts;
 
+  loadCategoryJson () async {
+    String data = await DefaultAssetBundle.of(context).loadString("assets/model/category_products.json"); //for calling local json
+    final jsonCategoryResult = jsonDecode(data);
+    print(jsonCategoryResult);
+    return jsonCategoryResult;
+
+  }
+   // late Future<Product> newProducts;
+//late Future<List<Children>> addChildren;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    newProducts = Network().fetchProduct();
+    loadCategoryJson();
+    // newProducts = Network().fetchProduct();
+    //addChildren = Newnet().fetchPhotos(http.Client());
 
-    newProducts.then((product) {
-      print(product.navigation![1].alias);
-    }
-    );
+    // newProducts.then((product) {
+    //   print('the product isssssssssssssssssss ${product!.navigation![1]}');
+    // }
+    // );
   }
 
   @override
@@ -67,7 +78,7 @@ class _ExploreCollectionsDrawerState extends State<ExploreCollectionsDrawer> {
                 height: 25,
               ),
               FutureBuilder(
-                future: newProducts,
+                future: loadCategoryJson(),
                   builder: (BuildContext context, snapshot){
                   if(snapshot.hasData){
                     return Column(
@@ -99,7 +110,7 @@ class _ExploreCollectionsDrawerState extends State<ExploreCollectionsDrawer> {
                          SizedBox(
                           height: 659,
                           child: TabBarView(children:[
-                            WomenDrop(snapshot: snapshot,),
+                            WomenDrop(snapshot: snapshot),
                             MenDrop(),
                             KidsDrop(),
                           ]),

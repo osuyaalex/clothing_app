@@ -76,7 +76,7 @@ class Navigation {
     data['type'] = this.type;
     if (this.channelExclusions != null) {
       data['channelExclusions'] =
-          channelExclusions!.map((v) => v).toList();              //iiiiiuiuhjjjjjjjjjjjjjjjjjjjj
+          channelExclusions!.map((v) => v).toList();
     }
     data['webLargePriority'] = this.webLargePriority;
     if (this.content != null) {
@@ -340,7 +340,7 @@ class Hildren {
       data['link'] = this.link!.toJson();
     }
     if (this.children != null) {
-      data['children'] = this.children!.map((v) => v.toJson()).toList();
+      data['children'] = children!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -538,4 +538,8 @@ class Chil {
     }
     return data;
   }
+  // Start: Added method
+  @override
+  String toString() => toJson().toString();
+// End: Added method
 }

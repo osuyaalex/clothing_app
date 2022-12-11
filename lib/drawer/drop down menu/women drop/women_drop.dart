@@ -21,7 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../network/model.dart';
+import '../../../network/category network/model.dart';
 import 'menu/accessories/beanies.dart';
 import 'menu/accessories/belts.dart';
 import 'menu/accessories/caps.dart';
@@ -31,11 +31,12 @@ import 'menu/beauty/hair_care.dart';
 import 'menu/beauty/make_up.dart';
 
 class WomenDrop extends StatelessWidget {
-  final AsyncSnapshot<Product> snapshot;
+  final AsyncSnapshot snapshot;
   const WomenDrop({Key? key, required this.snapshot}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+   List productList = snapshot.data;
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -65,7 +66,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenDresses();
+                              return   WomenDresses(product:productList,);
                             }));
                           },
                           child: Text('Dresses',
@@ -78,7 +79,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenTop();
+                              return  WomenTop(products: productList,);
                             }));
                           },
                           child: Text('Tops',
@@ -92,7 +93,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenShoes();
+                              return  WomenShoes(prods: productList,);
                             }));
                           },
                           child: Text('Shoes',
@@ -121,7 +122,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelOuter();
+                              return WomanApparelOuter(product: productList);
                             }));
                           },
                           child: Text('Outer',
@@ -134,7 +135,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanAparelDress();
+                              return  WomanAparelDress(product: productList,);
                             }));
                           },
                           child: Text('Dress',
@@ -147,7 +148,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelBlouse();
+                              return  WomanApparelBlouse(product: productList,);
                             }));
                           },
                           child: Text('Blouse',
@@ -160,7 +161,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelTShirt();
+                              return  WomanApparelTShirt(product: productList,);
                             }));
                           },
                           child: Text('T-Shirt',
@@ -173,7 +174,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelKnitWear();
+                              return  WomanApparelKnitWear(product: productList,);
                             }));
                           },
                           child: Text('KnitWear',
@@ -186,7 +187,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelSkirt();
+                              return  WomanApparelSkirt(product: productList,);
                             }));
                           },
                           child: Text('Skirt',
@@ -199,7 +200,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelPants();
+                              return  WomanApparelPants(product: productList,);
                             }));
                           },
                           child: Text('Pants',
@@ -212,7 +213,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelDenim();
+                              return  WomanApparelDenim(product: productList,);
                             }));
                           },
                           child: Text('Denim',
@@ -225,7 +226,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomanApparelKids();
+                              return  WomanApparelKids(product: productList,);
                             }));
                           },
                           child: Text('Kids',
@@ -254,7 +255,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenShoesBoots();
+                              return  WomenShoesBoots(product: productList,);
                             }));
                           },
                           child: Text('Boots',
@@ -267,7 +268,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenShoesHeels();
+                              return  WomenShoesHeels(product: productList,);
                             }));
                           },
                           child: Text('Heels',
@@ -280,7 +281,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenShoesTrainers();
+                              return  WomenShoesTrainers(product: productList,);
                             }));
                           },
                           child: Text('Trainers',
@@ -309,7 +310,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenBagSchool();
+                              return WomenBagSchool(product: productList,);
                             }));
                           },
                           child: Text('School',
@@ -322,7 +323,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenBagWork();
+                              return  WomenBagWork(product: productList,);
                             }));
                           },
                           child: Text('Work',
@@ -335,7 +336,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenBagHiking();
+                              return  WomenBagHiking(product: productList,);
                             }));
                           },
                           child: Text('Hiking',
@@ -364,7 +365,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenAccessoriesBeanies();
+                              return  WomenAccessoriesBeanies(product: productList,);
                             }));
                           },
                           child: Text('Beanies',
@@ -377,7 +378,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenAccessoriesBelts();
+                              return WomenAccessoriesBelts(product: productList,);
                             }));
                           },
                           child: Text('Belts',
@@ -390,7 +391,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenAccessoriesCaps();
+                              return  WomenAccessoriesCaps(product: productList,);
                             }));
                           },
                           child: Text('Caps',
@@ -419,7 +420,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenBeautyBodyCare();
+                              return  WomenBeautyBodyCare(product: productList,);
                             }));
                           },
                           child: Text('Body Care',
@@ -432,7 +433,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenBeautyHairCare();
+                              return  WomenBeautyHairCare(product: productList,);
                             }));
                           },
                           child: Text('Hair Care',
@@ -445,7 +446,7 @@ class WomenDrop extends StatelessWidget {
                         TextButton(
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return const WomenBeautyMakeUp();
+                              return  WomenBeautyMakeUp(product: productList,);
                             }));
                           },
                           child: Text('Make Up',

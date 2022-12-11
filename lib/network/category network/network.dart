@@ -18,7 +18,10 @@ class Network {
     );
     if (response.statusCode == 200){
       final responseJson = json.decode(response.body);
-      print('The Url is:${response.body}');
+      // ['Children']
+      // .map((data) => Product.fromJson(data)).toList();
+      //print('The Url is:${response.body}');
+
 
       return Product.fromJson(responseJson);
     }else{

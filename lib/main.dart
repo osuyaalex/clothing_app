@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
       routes: {
         TitleHome.routeName:(context)=>const TitleHome(),
         BlackScreen.routeName:(context)=>const BlackScreen(),
-        WomenDresses.routeName:(context)=> const WomenDresses(),
         ExploreCollectionsDrawer.routeName:(context)=> const ExploreCollectionsDrawer(),
       },
     );

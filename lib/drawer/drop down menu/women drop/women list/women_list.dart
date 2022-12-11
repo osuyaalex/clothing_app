@@ -1,15 +1,13 @@
 List<String> nnew = [
-  'New',
   'Dresses',
   'Tops',
   'Shoes',
 
 ];
 List<String> apparel = [
-  'Apparel',
   'Outer',
   'Dress',
-  'Blouse/Shirt',
+  'Blouse',
   'T-shirt',
   'Knitwear',
   'Skirt',
@@ -18,25 +16,21 @@ List<String> apparel = [
   'Kids',
 ];
 List<String> bag = [
-  'Bag',
   'School',
   'Work',
   'Hiking'
 ];
 List<String> shoes = [
-  'Shoes',
+   'Boots',
+  'Heels',
   'Trainers',
-  'Boots',
-  'Heels'
 ];
 List<String> accessories = [
-  'Accessories',
   'Beanies',
   'Belts',
   'Caps'
 ];
 List<String> beauty = [
-  'Beauty',
   'BodyCare',
   'HairCare',
   'Makeup'
