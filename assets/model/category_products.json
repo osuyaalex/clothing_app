@@ -386,9 +386,8 @@
     "price": 50,
     "rating": 4.5,
     "type": "dresses",
-    "size_and_fit": "Regular fit, true to size",
-    "material": "100% cotton",
-    "care": "Machine wash cold, tumble dry low"
+    "size and fit": "Regular fit, true to size",
+    "Materials and care": "100% cotton,Machine wash cold, tumble dry low"
   },
   {
     "name": "Faux Leather Moto Jacket",

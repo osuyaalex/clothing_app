@@ -3,17 +3,11 @@ import 'dart:convert';
 import 'package:clothing_app/drawer/drop%20down%20menu/kids/kids_drop.dart';
 import 'package:clothing_app/drawer/drop%20down%20menu/men%20drop/men_drop.dart';
 import 'package:clothing_app/drawer/drop%20down%20menu/women%20drop/women_drop.dart';
-import 'package:clothing_app/network/category%20network/listchildren.dart';
-import 'package:clothing_app/network/category%20network/network.dart';
 import 'package:clothing_app/title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
-
-import '../network/category network/model.dart';
-
-
 
 class ExploreCollectionsDrawer extends StatefulWidget {
   static const String routeName= 'ExploreCollectionsDrawer';
