@@ -7,7 +7,9 @@ import 'package:page_transition/page_transition.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
+import '../../../../../drawer details/shoes drawer details/shoes_drawer_details.dart';
 import '../../../../../main_body/cart.dart';
+import '../../../../../title.dart';
 import '../../../../explore_collections_drawer.dart';
 import '../../women list/women_list.dart';
 import 'dresses.dart';
@@ -52,7 +54,14 @@ class _WomenShoesState extends State<WomenShoes> {
                     child: SvgPicture.asset('assets/iconImages/Menu.svg')),
                 Padding(
                   padding: const EdgeInsets.only(left: 40.0),
-                  child: SvgPicture.asset('assets/iconImages/Logo.svg'),
+                  child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                          return TitleHome();
+                        }));
+                      },
+                      child: SvgPicture.asset('assets/iconImages/Logo.svg')
+                  ),
                 ),
                 Row(
                   children: [
@@ -284,73 +293,80 @@ class _WomenShoesState extends State<WomenShoes> {
                     crossAxisCount: 2,
                     itemCount: results.length,
                     itemBuilder: (BuildContext ctx, index){
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Container(
-                              width: 250,
-                              height: 250,
+                      return GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return ShoesDrawerDetails(results: results[index]);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 250,
+                                height: 250,
 
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(results[index]['image'])
-                                  )
-                              ),
-                              child: Align(
-                                alignment: Alignment.bottomRight,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Icon(Icons.favorite_border,
-                                    color: Colors.orange,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(results[index]['image'])
+                                    )
+                                ),
+                                child: Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.favorite_border,
+                                      color: Colors.orange,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(
-                              height: 8,
-                            ),
+                              const SizedBox(
+                                height: 8,
+                              ),
 
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text('WM',
-                                style: GoogleFonts.tenorSans(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 15
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('WM',
+                                  style: GoogleFonts.tenorSans(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15
+                                  ),
                                 ),
                               ),
-                            ),
 
-                            const SizedBox(
-                              height: 7,
-                            ),
+                              const SizedBox(
+                                height: 7,
+                              ),
 
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(results[index]['name'],
-                                style: GoogleFonts.tenorSans(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 15,
-                                    color: Colors.grey.shade600
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(results[index]['name'],
+                                  style: GoogleFonts.tenorSans(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15,
+                                      color: Colors.grey.shade600
+                                  ),
                                 ),
                               ),
-                            ),
 
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text('\$${results[index]['price'].toString()}',
-                                style: GoogleFonts.tenorSans(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 17,
-                                    color: Colors.orange
-                                ),
+                              const SizedBox(
+                                height: 5,
                               ),
-                            )
-                          ],
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text('\$${results[index]['price'].toString()}',
+                                  style: GoogleFonts.tenorSans(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 17,
+                                      color: Colors.orange
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       );
                     },
@@ -364,14 +380,21 @@ class _WomenShoesState extends State<WomenShoes> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 180,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(results[index]['image'])
-                                  )
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context){
+                                  return ShoesDrawerDetails(results: results[index]);
+                                }));
+                              },
+                              child: Container(
+                                height: 180,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(results[index]['image'])
+                                    )
+                                ),
                               ),
                             ),
                           ),

@@ -19,7 +19,7 @@ class ExploreCollectionsDrawer extends StatefulWidget {
 
 class _ExploreCollectionsDrawerState extends State<ExploreCollectionsDrawer> {
 
-  loadCategoryJson () async {
+   loadCategoryJson () async {
     String data = await DefaultAssetBundle.of(context).loadString("assets/model/category_products.json"); //for calling local json
     final jsonCategoryResult = jsonDecode(data);
     print(jsonCategoryResult);
@@ -47,81 +47,83 @@ class _ExploreCollectionsDrawerState extends State<ExploreCollectionsDrawer> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 30.0, left: 15),
-              child: IconButton(
-                  onPressed: (){
-                    Navigator.of(context).push(PageTransition(
-                      child: const TitleHome(),
-                      type: PageTransitionType.rightToLeft,
-                      childCurrent: widget,
-                      duration: const Duration(milliseconds: 300),
-                      reverseDuration: const Duration(milliseconds: 300),
-                    ));
-                  },
-                  icon: SvgPicture.asset('assets/iconImages/Close.svg',
-                  height: 30,
-                    width: 30,
-                  )
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 30.0, left: 15),
+                child: IconButton(
+                    onPressed: (){
+                      Navigator.of(context).push(PageTransition(
+                        child: const TitleHome(),
+                        type: PageTransitionType.rightToLeft,
+                        childCurrent: widget,
+                        duration: const Duration(milliseconds: 300),
+                        reverseDuration: const Duration(milliseconds: 300),
+                      ));
+                    },
+                    icon: SvgPicture.asset('assets/iconImages/Close.svg',
+                    height: 30,
+                      width: 30,
+                    )
+                ),
               ),
-            ),
-              const SizedBox(
-                height: 25,
-              ),
-              FutureBuilder(
-                future: loadCategoryJson(),
-                  builder: (BuildContext context, snapshot){
-                  if(snapshot.hasData){
-                    return Column(
-                      children: [
-                        TabBar(
-                            labelColor: Colors.black,
-                            unselectedLabelColor: Colors.grey,
-                            indicatorPadding: EdgeInsets.only(top: 35),
-                            indicator: const BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('assets/iconImages/Rectangle.png')
-                                )
-                            ),
-                            tabs: [
-                              Tab(child: Text('WOMEN', style: GoogleFonts.tenorSans(
-                                  fontSize: 20
-                              ),)),
-                              Tab(child: Text('MEN', style: GoogleFonts.tenorSans(
-                                  fontSize: 20
-                              ),)),
-                              Tab(child: Text('KIDS', style: GoogleFonts.tenorSans(
-                                  fontSize: 20
-                              ),)),
-                            ]
+                const SizedBox(
+                  height: 25,
+                ),
+                FutureBuilder(
+                  future: loadCategoryJson(),
+                    builder: (BuildContext context, snapshot){
+                    if(snapshot.hasData){
+                      return Column(
+                        children: [
+                          TabBar(
+                              labelColor: Colors.black,
+                              unselectedLabelColor: Colors.grey,
+                              indicatorPadding: EdgeInsets.only(top: 35),
+                              indicator: const BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage('assets/iconImages/Rectangle.png')
+                                  )
+                              ),
+                              tabs: [
+                                Tab(child: Text('WOMEN', style: GoogleFonts.tenorSans(
+                                    fontSize: 20
+                                ),)),
+                                Tab(child: Text('MEN', style: GoogleFonts.tenorSans(
+                                    fontSize: 20
+                                ),)),
+                                Tab(child: Text('KIDS', style: GoogleFonts.tenorSans(
+                                    fontSize: 20
+                                ),)),
+                              ]
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                           SizedBox(
+                            height: 659,
+                            child: TabBarView(children:[
+                              WomenDrop(snapshot: snapshot),
+                              MenDrop(),
+                              KidsDrop(),
+                            ]),
+                          )
+                        ],
+                      );
+                    }else{
+                      return const Center(
+                        child: CircularProgressIndicator(
+                          color: Colors.black87,
                         ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                         SizedBox(
-                          height: 659,
-                          child: TabBarView(children:[
-                            WomenDrop(snapshot: snapshot),
-                            MenDrop(),
-                            KidsDrop(),
-                          ]),
-                        )
-                      ],
-                    );
-                  }else{
-                    return const Center(
-                      child: CircularProgressIndicator(
-                        color: Colors.black87,
-                      ),
-                    );
-                  }
-                  }
-              )
+                      );
+                    }
+                    }
+                )
 
-          ],
+            ],
+          ),
         ),
       ),
     );

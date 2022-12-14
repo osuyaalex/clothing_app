@@ -21,7 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../network/category network/model.dart';
+
 import 'menu/accessories/beanies.dart';
 import 'menu/accessories/belts.dart';
 import 'menu/accessories/caps.dart';
@@ -59,52 +59,68 @@ class WomenDrop extends StatelessWidget {
                         color: Colors.black
                     ),
                   ),
-                  content:Padding(
-                    padding: const EdgeInsets.only(right: 250.0),
-                    child: Column(
-                      children: [
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return   WomenDresses(product:productList,);
-                            }));
-                          },
-                          child: Text('Dresses',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                  content:Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return   WomenDresses(product:productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Dresses',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomenTop(products: productList,);
-                            }));
-                          },
-                          child: Text('Tops',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomenTop(products: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Tops',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        //something new
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomenShoes(prods: productList,);
-                            }));
-                          },
-                          child: Text('Shoes',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      //something new
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomenShoes(prods: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Shoes',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 AccordionSection(
@@ -115,129 +131,181 @@ class WomenDrop extends StatelessWidget {
                 color: Colors.black
                 ),
                 ),
-                  content:  Padding(
-                    padding: const EdgeInsets.only(right: 250.0),
-                    child: Column(
-                      children: [
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return WomanApparelOuter(product: productList);
-                            }));
-                          },
-                          child: Text('Outer',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                  content:  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return WomanApparelOuter(product: productList);
+                          }));
+                        },
+                        child:Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Outer',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanAparelDress(product: productList,);
-                            }));
-                          },
-                          child: Text('Dress',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanAparelDress(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Dress',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanApparelBlouse(product: productList,);
-                            }));
-                          },
-                          child: Text('Blouse',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanApparelBlouse(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Blouse',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanApparelTShirt(product: productList,);
-                            }));
-                          },
-                          child: Text('T-Shirt',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanApparelTShirt(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('T-Shirt',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanApparelKnitWear(product: productList,);
-                            }));
-                          },
-                          child: Text('KnitWear',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanApparelKnitWear(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Knitwear',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanApparelSkirt(product: productList,);
-                            }));
-                          },
-                          child: Text('Skirt',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanApparelSkirt(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Skirt',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanApparelPants(product: productList,);
-                            }));
-                          },
-                          child: Text('Pants',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanApparelPants(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Pants',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanApparelDenim(product: productList,);
-                            }));
-                          },
-                          child: Text('Denim',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanApparelDenim(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Denim',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return  WomanApparelKids(product: productList,);
-                            }));
-                          },
-                          child: Text('Kids',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                      ),
+                      TextButton(
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return  WomanApparelKids(product: productList,);
+                          }));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text('Kids',
+                              style: GoogleFonts.tenorSans(
+                                  fontSize: 20,
+                                  color: Colors.black
+                              ),
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 AccordionSection(
@@ -258,10 +326,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenShoesBoots(product: productList,);
                             }));
                           },
-                          child: Text('Boots',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Boots',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -271,10 +345,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenShoesHeels(product: productList,);
                             }));
                           },
-                          child: Text('Heels',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Heels',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -284,10 +364,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenShoesTrainers(product: productList,);
                             }));
                           },
-                          child: Text('Trainers',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Trainers',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -313,10 +399,16 @@ class WomenDrop extends StatelessWidget {
                               return WomenBagSchool(product: productList,);
                             }));
                           },
-                          child: Text('School',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child:Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('School',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -326,10 +418,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenBagWork(product: productList,);
                             }));
                           },
-                          child: Text('Work',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Work',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -339,10 +437,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenBagHiking(product: productList,);
                             }));
                           },
-                          child: Text('Hiking',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child:Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Hiking',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -368,10 +472,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenAccessoriesBeanies(product: productList,);
                             }));
                           },
-                          child: Text('Beanies',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Beanies',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -381,10 +491,16 @@ class WomenDrop extends StatelessWidget {
                               return WomenAccessoriesBelts(product: productList,);
                             }));
                           },
-                          child: Text('Belts',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Belts',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -394,10 +510,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenAccessoriesCaps(product: productList,);
                             }));
                           },
-                          child: Text('Caps',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Caps',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -423,10 +545,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenBeautyBodyCare(product: productList,);
                             }));
                           },
-                          child: Text('Body Care',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Body Care',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -436,10 +564,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenBeautyHairCare(product: productList,);
                             }));
                           },
-                          child: Text('Hair Care',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Hair Care',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -449,10 +583,16 @@ class WomenDrop extends StatelessWidget {
                               return  WomenBeautyMakeUp(product: productList,);
                             }));
                           },
-                          child: Text('Make Up',
-                            style: GoogleFonts.tenorSans(
-                                fontSize: 20,
-                                color: Colors.black
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Make Up',
+                                style: GoogleFonts.tenorSans(
+                                    fontSize: 20,
+                                    color: Colors.black
+                                ),
+                              ),
                             ),
                           ),
                         ),

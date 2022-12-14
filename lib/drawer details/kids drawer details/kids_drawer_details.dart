@@ -1,26 +1,42 @@
+import 'dart:convert';
+
 import 'package:accordion/accordion.dart';
+import 'package:clothing_app/provider/cart_provider.dart';
+import 'package:clothing_app/title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
+import '../../controller/snackbar_controller.dart';
+import '../../drawer/explore_collections_drawer.dart';
+import '../../main_body/cart.dart';
+import 'package:collection/collection.dart';
 
-import '../drawer/explore_collections_drawer.dart';
-import '../main_body/cart.dart';
+import 'kids_also_like.dart';
 
-class DrawerDetails extends StatefulWidget {
- final dynamic results;
-  const DrawerDetails({Key? key, required this.results}) : super(key: key);
+class KidsDrawerDetails extends StatefulWidget {
+  final dynamic results;
+  const KidsDrawerDetails({Key? key, required this.results}) : super(key: key);
+
 
   @override
-  State<DrawerDetails> createState() => _DrawerDetailsState();
+  State<KidsDrawerDetails> createState() => _KidsDrawerDetailsState();
 }
 
-class _DrawerDetailsState extends State<DrawerDetails> {
+class _KidsDrawerDetailsState extends State<KidsDrawerDetails> {
   DateTime currentDate = DateTime.now();
   bool _small = true;
   bool _medium = true;
   bool _large = true;
+  String _selectedIcon = 'n/s';
+  loadCategoryJson () async {
+    String data = await DefaultAssetBundle.of(context).loadString("assets/model/category_products.json"); //for calling local json
+    final jsonCategoryResult = jsonDecode(data);
+    print(jsonCategoryResult);
+    return jsonCategoryResult;
+  }
   @override
   Widget build(BuildContext context) {
     DateTime futureDate = currentDate.add(Duration(days: 6));
@@ -48,7 +64,13 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                   child: SvgPicture.asset('assets/iconImages/Menu.svg')),
               Padding(
                 padding: const EdgeInsets.only(left: 40.0),
-                child: SvgPicture.asset('assets/iconImages/Logo.svg'),
+                child: GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return TitleHome();
+                      }));
+                    },
+                    child: SvgPicture.asset('assets/iconImages/Logo.svg')),
               ),
               Row(
                 children: [
@@ -118,13 +140,18 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                 children: [
                   Text('Size',
                     style: GoogleFonts.tenorSans(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
                     ),
                   ),
                   GestureDetector(
                     onTap: (){
                       setState(() {
+                        if(_selectedIcon == 'n/s'){
+                          _selectedIcon = 'S';
+                        }else{
+                          _selectedIcon = 'n/s';
+                        }
                         _small = !_small;
                       });
                     },
@@ -134,38 +161,6 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                         height: 25,
                         width: 25,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border(
-                            top: BorderSide(
-                              color: Colors.grey
-                            ),
-                              left: BorderSide(
-                                  color: Colors.grey
-                              ),
-                              right: BorderSide(
-                              color: Colors.grey
-                          ),
-                            bottom: BorderSide(
-                            color: Colors.grey
-                        )
-                          )
-                        ),
-                        child: Center(
-                          child: Text('S',
-                            style: GoogleFonts.tenorSans(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 15
-                            ),
-                          ),
-                        ),
-                      ),
-                    ):Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Container(
-                        height: 25,
-                        width: 25,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
                             borderRadius: BorderRadius.circular(25),
                             border: Border(
                                 top: BorderSide(
@@ -185,7 +180,39 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                         child: Center(
                           child: Text('S',
                             style: GoogleFonts.tenorSans(
-                              color: Colors.grey,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15
+                            ),
+                          ),
+                        ),
+                      ),
+                    ):Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Container(
+                        height: 25,
+                        width: 25,
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(25),
+                            border: Border(
+                                top: BorderSide(
+                                    color: Colors.grey
+                                ),
+                                left: BorderSide(
+                                    color: Colors.grey
+                                ),
+                                right: BorderSide(
+                                    color: Colors.grey
+                                ),
+                                bottom: BorderSide(
+                                    color: Colors.grey
+                                )
+                            )
+                        ),
+                        child: Center(
+                          child: Text('S',
+                            style: GoogleFonts.tenorSans(
+                                color: Colors.grey,
                                 fontWeight: FontWeight.w500,
                                 fontSize: 15
                             ),
@@ -197,6 +224,11 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                   GestureDetector(
                     onTap: (){
                       setState(() {
+                        if(_selectedIcon == 'n/s'){
+                          _selectedIcon = 'M';
+                        }else{
+                          _selectedIcon = 'n/s';
+                        }
                         _medium = !_medium;
                       });
                     },
@@ -269,7 +301,12 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                   GestureDetector(
                     onTap: (){
                       setState(() {
-                        _large =!_large;
+                        if(_selectedIcon == 'n/s'){
+                          _selectedIcon = 'L';
+                        }else{
+                          _selectedIcon = 'n/s';
+                        }
+                        _large = !_large;
                       });
                     },
                     child: _large ?Padding(
@@ -341,40 +378,52 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                 ],
               ),
             ),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 60,
-              decoration: BoxDecoration(
-                color: Colors.black
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(Icons.add, color: Colors.white,),
-                            ),
-                            Text('ADD TO BASKET',
-                              style: GoogleFonts.tenorSans(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 15
+            GestureDetector(
+              onTap: (){
+                Provider.of<CartProvider>(context, listen: false).getItems.firstWhereOrNull((element) => element.name == widget.results['name']) != null? snackBar('item already added', context)
+                    :Provider.of<CartProvider>(context, listen: false).addItem(
+                    widget.results['name'],
+                    widget.results['image'],
+                    1,
+                    widget.results['price'],
+                    _selectedIcon
+                );
+              },
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 60,
+                decoration: BoxDecoration(
+                    color: Colors.black
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Icon(Icons.add, color: Colors.white,),
                               ),
-                            ),
-                          ],
-                        )
+                              Text('ADD TO BASKET',
+                                style: GoogleFonts.tenorSans(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 15
+                                ),
+                              ),
+                            ],
+                          )
+                      ),
                     ),
-                  ),
-                  Padding(
+                    Padding(
                       padding: EdgeInsets.only(right: 27),
-                    child: Icon(Icons.favorite_border, color: Colors.white,),
-                  )
-                ],
+                      child: Icon(Icons.favorite_border, color: Colors.white,),
+                    )
+                  ],
+                ),
               ),
             ),
             const SizedBox(
@@ -386,18 +435,18 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                 alignment: Alignment.centerLeft,
                 child: Text('DESCRIPTION'.toUpperCase(),
                   style: GoogleFonts.tenorSans(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500
                   ),
                 ),
               ),
             ),
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 14),
+              padding: EdgeInsets.symmetric(horizontal: 14),
               child: Text(widget.results['description'],
                 style: GoogleFonts.tenorSans(
-                  fontSize: 15,
-                  height: 1.5
+                    fontSize: 15,
+                    height: 1.5
                 ),
               ),
             ),
@@ -455,6 +504,21 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 33,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text('care'.toUpperCase(),
+                  style: GoogleFonts.tenorSans(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500
+                  ),
+                ),
+              ),
+            ),
             Accordion(
                 headerBackgroundColor: Color(0xfffafafb),
                 headerBackgroundColorOpened: Color(0xfffafafb),
@@ -467,7 +531,7 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                 maxOpenSections: 1,
                 children: [
                   AccordionSection(
-                    isOpen: false,
+                      isOpen: false,
                       header:Row(
                         children: [
                           Padding(
@@ -480,24 +544,24 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                       content: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 60.0),
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text('Estimated to be delivered on',
-                            style: GoogleFonts.tenorSans(
-                              color: Colors.grey.shade700,
-                                fontSize: 15,
-                                height: 1.5
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 60.0),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Estimated to be delivered on',
+                                style: GoogleFonts.tenorSans(
+                                    color: Colors.grey.shade700,
+                                    fontSize: 15,
+                                    height: 1.5
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                      ),
                           Padding(
                             padding: const EdgeInsets.only(left:60.0, top: 8),
                             child: Text("${DateFormat('MM/dd/yyyy').format(currentDate)} - ${DateFormat('MM/dd/yyyy').format(futureDate)}",
                               style: GoogleFonts.tenorSans(
-                                color: Colors.grey.shade700,
+                                  color: Colors.grey.shade700,
                                   fontSize: 15,
                                   height: 1.5
                               ),
@@ -508,7 +572,68 @@ class _DrawerDetailsState extends State<DrawerDetails> {
                       )
                   )
                 ]
-            )
+            ),
+            SvgPicture.asset('assets/iconImages/youmay.svg'),
+            FutureBuilder(
+                future: loadCategoryJson(),
+                builder: (context, snapshot){
+                  if(snapshot.hasData){
+                    return KidsAlsoLike(snapshot: snapshot);
+                  }else{
+                    return CircularProgressIndicator(color: Colors.black,);
+                  }
+                }
+            ),
+            const SizedBox(
+              height: 80,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: SvgPicture.asset('assets/iconImages/Twitter.svg'),
+                ),
+                SvgPicture.asset('assets/iconImages/Instagram.svg'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: SvgPicture.asset('assets/iconImages/YouTube.svg'),
+                ),
+              ],
+
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            SvgPicture.asset('assets/iconImages/8.svg'),
+            const SizedBox(
+              height: 25,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('support@openui design',
+                style: GoogleFonts.tenorSans(
+                    fontSize: 17
+                ),
+              ),
+            ),
+            Text('+60 825 876',
+              style: GoogleFonts.tenorSans(
+                  fontSize: 17
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('08:00 - 22:00 - Everyday',
+                style: GoogleFonts.tenorSans(
+                    fontSize: 17
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 22,
+            ),
+            SvgPicture.asset('assets/iconImages/8.svg'),
           ],
         ),
       ),

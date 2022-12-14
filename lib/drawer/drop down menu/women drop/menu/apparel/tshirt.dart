@@ -8,6 +8,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
+import '../../../../../drawer details/Tshirt drawer details/tshirt_drawer_details.dart';
 import '../../../../../main_body/cart.dart';
 import '../../../../explore_collections_drawer.dart';
 import '../../women list/women_list.dart';
@@ -315,22 +316,29 @@ class _WomanApparelTShirtState extends State<WomanApparelTShirt> {
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Container(
-                              width: 250,
-                              height: 250,
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context){
+                                  return TShirtDrawerDetails(results: results[index]);
+                                }));
+                              },
+                              child: Container(
+                                width: 250,
+                                height: 250,
 
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(results[index]['image'])
-                                  )
-                              ),
-                              child: Align(
-                                alignment: Alignment.bottomRight,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Icon(Icons.favorite_border,
-                                    color: Colors.orange,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(results[index]['image'])
+                                    )
+                                ),
+                                child: Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.favorite_border,
+                                      color: Colors.orange,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -391,14 +399,21 @@ class _WomanApparelTShirtState extends State<WomanApparelTShirt> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 180,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(results[index]['image'])
-                                  )
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context){
+                                  return TShirtDrawerDetails(results: results[index]);
+                                }));
+                              },
+                              child: Container(
+                                height: 180,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(results[index]['image'])
+                                    )
+                                ),
                               ),
                             ),
                           ),
