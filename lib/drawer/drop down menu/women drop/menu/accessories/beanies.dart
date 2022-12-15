@@ -11,6 +11,7 @@ import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
 import '../../../../../drawer details/beanies drawer details/beanies_drawer_details.dart';
 import '../../../../../main_body/cart.dart';
+import '../../../../../title.dart';
 import '../../../../explore_collections_drawer.dart';
 
 class WomenAccessoriesBeanies extends StatefulWidget {
@@ -53,7 +54,14 @@ class _WomenAccessoriesBeaniesState extends State<WomenAccessoriesBeanies> {
                     child: SvgPicture.asset('assets/iconImages/Menu.svg')),
                 Padding(
                   padding: const EdgeInsets.only(left: 40.0),
-                  child: SvgPicture.asset('assets/iconImages/Logo.svg'),
+                  child:  GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                          return TitleHome();
+                        }));
+                      },
+                      child: SvgPicture.asset('assets/iconImages/Logo.svg')
+                  ),
                 ),
                 Row(
                   children: [

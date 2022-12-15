@@ -61,7 +61,8 @@ class _WomenDressesState extends State<WomenDresses> {
                         return TitleHome();
                       }));
                     },
-                    child: SvgPicture.asset('assets/iconImages/Logo.svg')),
+                    child: SvgPicture.asset('assets/iconImages/Logo.svg')
+                ),
               ),
               Row(
                 children: [

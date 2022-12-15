@@ -9,7 +9,9 @@ import 'package:page_transition/page_transition.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
+import '../../../../../drawer details/work dd/work_dd.dart';
 import '../../../../../main_body/cart.dart';
+import '../../../../../title.dart';
 import '../../../../explore_collections_drawer.dart';
 class WomenBagWork extends StatefulWidget {
  final List product;
@@ -51,7 +53,14 @@ class _WomenBagWorkState extends State<WomenBagWork> {
                     child: SvgPicture.asset('assets/iconImages/Menu.svg')),
                 Padding(
                   padding: const EdgeInsets.only(left: 40.0),
-                  child: SvgPicture.asset('assets/iconImages/Logo.svg'),
+                  child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                          return TitleHome();
+                        }));
+                      },
+                      child: SvgPicture.asset('assets/iconImages/Logo.svg')
+                  ),
                 ),
                 Row(
                   children: [
@@ -287,22 +296,29 @@ class _WomenBagWorkState extends State<WomenBagWork> {
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
-                            Container(
-                              width: 250,
-                              height: 250,
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context){
+                                  return WorkDrawerDetails(results: results[index]);
+                                }));
+                              },
+                              child: Container(
+                                width: 250,
+                                height: 250,
 
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(results[index]['image'])
-                                  )
-                              ),
-                              child: Align(
-                                alignment: Alignment.bottomRight,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Icon(Icons.favorite_border,
-                                    color: Colors.orange,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(results[index]['image'])
+                                    )
+                                ),
+                                child: Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.favorite_border,
+                                      color: Colors.orange,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -363,14 +379,21 @@ class _WomenBagWorkState extends State<WomenBagWork> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 180,
-                              width: 150,
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(results[index]['image'])
-                                  )
+                            child: GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context){
+                                  return WorkDrawerDetails(results: results[index]);
+                                }));
+                              },
+                              child: Container(
+                                height: 180,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(results[index]['image'])
+                                    )
+                                ),
                               ),
                             ),
                           ),
