@@ -262,10 +262,8 @@ class _WomanApparelKnitWearState extends State<WomanApparelKnitWear> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                           Icon(Icons.close)
+
                         ],
                       ),
                     ),
@@ -295,16 +293,14 @@ class _WomanApparelKnitWearState extends State<WomanApparelKnitWear> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Knit',
+                          Text('KnitWear',
                             style: GoogleFonts.tenorSans(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                         Icon(Icons.close)
+
                         ],
                       ),
                     )

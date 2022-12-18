@@ -235,10 +235,8 @@ class _WomenAccessoriesCapsState extends State<WomenAccessoriesCaps> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                          Icon(Icons.close)
+
                         ],
                       ),
                     ),

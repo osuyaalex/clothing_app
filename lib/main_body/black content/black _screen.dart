@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../drawer/explore_collections_drawer.dart';
-import 'cart.dart';
+import '../../drawer/explore_collections_drawer.dart';
+import '../cart.dart';
+import 'black/black_collection.dart';
+import 'october/october_collection.dart';
 
 class BlackScreen extends StatelessWidget {
   static const String routeName = 'BlackScreen';
@@ -98,7 +100,14 @@ class BlackScreen extends StatelessWidget {
                       alignment: Alignment.bottomCenter,
                       child: Padding(
                         padding: const EdgeInsets.only(top:100.0),
-                        child: Image.asset('assets/images/image 20.jpeg'),
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                              return OctoberCollections();
+                            }));
+                          },
+                            child: Image.asset('assets/images/image 20.jpeg')
+                        ),
                       )
                   ),
                 ),
@@ -127,7 +136,14 @@ class BlackScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Image.asset('assets/images/image 21.png'),
+            GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return BlackCollections();
+                  }));
+                },
+                child: Image.asset('assets/images/image 21.png')
+            ),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Row(

@@ -262,10 +262,8 @@ class _WomanApparelBlouseState extends State<WomanApparelBlouse> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                          Icon(Icons.close)
+
                         ],
                       ),
                     ),
@@ -301,10 +299,8 @@ class _WomanApparelBlouseState extends State<WomanApparelBlouse> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                          Icon(Icons.close)
+
                         ],
                       ),
                     )

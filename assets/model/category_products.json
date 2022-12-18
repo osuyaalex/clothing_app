@@ -10,6 +10,16 @@
     "Materials and care": "Polyester/spandex\nMachine washable\n"
   },
   {
+    "name": "Black Leather Jacket",
+    "image": "https://images.pexels.com/photos/14542730/pexels-photo-14542730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This sleek black leather jacket is the perfect addition to any wardrobe. The high-quality leather is soft and supple, and the jacket is fully lined for added warmth. The jacket features a classic collar, zip-front closure, and two front pockets.\n\nPair it with jeans and a t-shirt for a casual look, or dress it up with slacks and a button-down shirt. This jacket is versatile and timeless, making it a great investment piece.\n\nMaterial: 100% Leather\nCare: Dry clean only",
+    "price": 199,
+    "rating": 4.5,
+    "type": "black",
+    "size and fit": "Regular fit, available in sizes S-XXL",
+    "Materials and care": "100% Leather, dry clean only"
+  },
+  {
     "name": "B;ack crop top",
     "image": "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Timeless staples for your wardrobe, pair this women's cropped tank top from Bar III with high waisted bottoms for a sleek finish.\n\nImported\nCreated for Macy's\nSquare neckline",
@@ -28,6 +38,16 @@
     "type": "shoes",
     "size and fit":"N/A",
     "Materials and care": "N/A"
+  },
+  {
+    "name": "Denim Skirt",
+    "image": "https://images.pexels.com/photos/6044015/pexels-photo-6044015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This classic denim skirt is a wardrobe staple. The medium wash and A-line silhouette make it versatile and flattering on a variety of body types. The skirt has a zip-front closure and belt loops, and falls to just above the knee.\n\nPair it with a tucked-in blouse and heels for a dressed-up look, or wear it with a t-shirt and sneakers for a more casual outfit. The possibilities are endless with this versatile skirt.\n\nMaterial: 100% Cotton\nCare: Machine wash cold, tumble dry low",
+    "price": 49,
+    "rating": 4.0,
+    "type": "black",
+    "size and fit": "Regular fit, available in sizes XS-XL",
+    "Materials and care": "100% Cotton, machine wash cold, tumble dry low"
   },
   {
     "name": "Pink Buttoned Shirt",
@@ -50,6 +70,16 @@
     "Materials and care": "Polyester\nMachine washable\n"
   },
   {
+    "name": "Striped T-Shirt Dress",
+    "image": "https://images.pexels.com/photos/4954613/pexels-photo-4954613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This cute and comfortable t-shirt dress is perfect for everyday wear. The soft, lightweight fabric and relaxed fit make it easy to throw on and go, while the striped pattern adds a touch of style. The dress has short sleeves, a round neck, and falls to just above the knee.\n\nWear it with sneakers and a denim jacket for a casual look, or dress it up with heels and a belt for a more polished outfit. This dress is a must-have for any wardrobe.\n\nMaterial: 95% Cotton, 5% Spandex\nCare: Machine wash cold, tumble dry low",
+    "price": 35,
+    "rating": 4.7,
+    "type": "black",
+    "size and fit": "Relaxed fit, available in sizes S-XL",
+    "Materials and care": "95% Cotton, 5% Spandex, machine wash cold, tumble dry low"
+  },
+  {
     "name": "Grey TShirt",
     "image": "https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Showcase your worldly side and elevate your look with this stylish short sleeve T-shirt from Champion.\n\nMade in USA\nShort sleeves\nCrewneck",
@@ -68,6 +98,16 @@
     "type": "knitwear",
     "size and fit": "Approx. model height is 5'10\" and she is wearing a size medium\nDue to generous sizing, we suggest sizing down for the perfect fit\nApprox. 26\" long",
     "Materials and care": "100% cotton\nMachine washable\n"
+  },
+  {
+    "name": "Tank Top",
+    "image": "https://images.pexels.com/photos/2530990/pexels-photo-2530990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This classic plaid flannel shirt is a must-have for cooler weather. The soft, brushed fabric is warm and comfortable, and the shirt features a button-front closure and two front pockets. The shirt has a relaxed fit and falls to the hips.\n\nWear it over a t-shirt with jeans and sneakers for a casual look, or layer it under a sweater and pair it with chinos and boots for a more dressed-up outfit. This shirt is versatile and stylish, making it a great addition to any wardrobe.\n\nMaterial: 100% Cotton\nCare: Machine wash cold, tumble dry low",
+    "price": 45,
+    "rating": 4.3,
+    "type": "black",
+    "size and fit": "Relaxed fit, available in sizes S-XXL",
+    "Materials and care": "100% Cotton, machine wash cold, tumble dry low"
   },
   {
     "name": "Pink Skirt",
@@ -100,6 +140,16 @@
     "Materials and care": "Machine washable\nCotton, Polyester, Lyocell, Rayon, Elastane\n"
   },
   {
+    "name": "Faux Fur Coat",
+    "image": "https://images.pexels.com/photos/2830900/pexels-photo-2830900.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Stay warm and stylish with this luxurious faux fur coat. The soft, plush fabric is both comfortable and chic, and the coat features a collar, full-zip front closure, and two front pockets. The coat falls to just above the knee, making it a perfect length for both casual and dressy occasions.\n\nWear it over a sweater and jeans for a casual look, or pair it with a dress and heels for a more formal outfit. This coat is a must-have for any fashion-conscious person.\n\nMaterial: 100% Polyester\nCare: Dry clean only",
+    "price": 199,
+    "rating": 4.8,
+    "type": "black",
+    "size and fit": "Regular fit, available in sizes S-XL",
+    "Materials and care": "100% Polyester, dry clean only"
+  },
+  {
     "name": "Striped TShirt",
     "image": "https://images.pexels.com/photos/6437821/pexels-photo-6437821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "A classic stripe print covers this long-sleeve top from Epic Threads, perfect for pairing with her favorite leggings for a school-ready look.\n\nCreated for Macy's\nAllover stripe print\nCrewneck\nImported",
@@ -108,6 +158,16 @@
     "type": "kids",
     "size and fit": "N/A",
     "Materials and care": "Machine washable\nCotton/polyester\n"
+  },
+  {
+    "name": "Cable Knit Sweater",
+    "image": "https://images.pexels.com/photos/4471279/pexels-photo-4471279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This cozy cable knit sweater is perfect for cold weather. The thick, soft fabric is warm and comfortable, and the sweater features a classic round neck and ribbed cuffs and hem. The sweater has a relaxed fit, making it easy to wear over a shirt or on its own.\n\nWear it with jeans and boots for a casual look, or pair it with slacks and dress shoes for a more formal outfit. This sweater is a great addition to any wardrobe.\n\nMaterial: 100% Acrylic\nCare: Machine wash cold, tumble dry low",
+    "price": 65,
+    "rating": 4.4,
+    "type": "black",
+    "size and fit": "Relaxed fit, available in sizes S-XXL",
+    "Materials and care": "100% Acrylic, machine wash cold, tumble dry low"
   },
   {
     "name": "Black Boots",
@@ -170,6 +230,16 @@
     "Materials and care": "N/A"
   },
   {
+    "name": "Halloween Ghost Costume",
+    "image": "https://images.pexels.com/photos/14347511/pexels-photo-14347511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Get ready to haunt the neighborhood in this spooky Halloween Ghost Costume! The costume includes a flowing white jumpsuit with attached hood and gloves, as well as a spooky mask. The jumpsuit is made of comfortable and lightweight material, making it easy to wear for hours of trick-or-treating. The mask features glowing eyes and a ghostly face, making it the perfect finishing touch for this creepy costume.\n\nThe Halloween Ghost Costume is perfect for both kids and adults, and is suitable for Halloween parties, trick-or-treating, and other spooky events. Be sure to add a pair of white shoes and some spooky makeup to complete the look.\n\nThis costume is made of 100% polyester and is machine washable for easy care.",
+    "price": 39.99,
+    "rating": 4.5,
+    "type": "halloween",
+    "size and fit": "One size fits most",
+    "Materials and care": "100% polyester, machine washable"
+  },
+  {
     "name": "Gray and Red Flut Knit Caps",
     "image": "https://images.pexels.com/photos/919374/pexels-photo-919374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "This isotoner Women's Game Day Hat with smartDRI® technology is the perfect cold weather accessory for cheering on your favorite team. With innovative smartDRI® technology, water rolls off to keep your hands drier. So, choose your team colors and keep your ears and head toasty and dry during freezing sporting events, or a casual winter day out. Cozy, soft fleece lining provides the perfect balance of soft warmth and comfort. Care instructions: Hand wash cool, no bleach. Air dry flat. Do not tumble dry, iron, or dry clean.\n\nCozy knit hat with pom pom in assorted sports team colors\nWith smartDRI® technology, water rolls off so your hands stay drier\nFleece lining for a layer of softness and warmth\nPerfect for outdoor activities and on-the-go lifestyles\nShell: 100% Acrylic, Lining: 100% Polyester\nHand wash\nImported",
@@ -208,6 +278,16 @@
     "type": "body care",
     "size and fit": "N/A",
     "Materials and care": "N/A"
+  },
+  {
+    "name": "Halloween Zombie Costume",
+    "image": "https://images.pexels.com/photos/3217815/pexels-photo-3217815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Become the undead this Halloween with our Zombie Costume! The costume includes a tattered shirt, pants, and gloves, as well as a creepy zombie mask. The shirt and pants are made of durable and realistic-looking tattered fabric, giving you the authentic zombie look. The mask features a rotting flesh design and glowing eyes, adding to the spooky factor.\n\nThis Zombie Costume is perfect for both kids and adults, and is suitable for Halloween parties, trick-or-treating, and other spooky events. Be sure to add some fake blood and zombie makeup to complete the look.\n\nThis costume is made of 100% polyester and is machine washable for easy care.",
+    "price": 49.99,
+    "rating": 4.7,
+    "type": "halloween",
+    "size and fit": "One size fits most",
+    "Materials and care": "100% polyester, machine washable"
   },
   {
     "name": "Prima 3000 Flat Iron and 1\" Curling Wand Limited Edition Set",
@@ -250,6 +330,16 @@
     "Materials and care": "Machine washable\nPolyester"
   },
   {
+    "name": "Halloween Skeleton Costume",
+    "image": "https://images.pexels.com/photos/5600883/pexels-photo-5600883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Become a walking skeleton this Halloween with our Skeleton Costume! The costume includes a black jumpsuit with white skeleton print, as well as a skeleton mask. The jumpsuit is made of comfortable and lightweight material, making it easy to wear for hours of trick-or-treating. The mask features glowing eyes and a skeleton face, making it the perfect finishing touch for this spooky costume.\n\nThe Skeleton Costume is perfect for both kids and adults, and is suitable for Halloween parties, trick-or-treating, and other spooky events. Be sure to add some white face paint and a pair of black shoes to complete the look.\n\nThis costume is made of 100% polyester and is machine washable for easy care.",
+    "price": 29.99,
+    "rating": 4.3,
+    "type": "halloween",
+    "size and fit": "One size fits most",
+    "Materials and care": "100% polyester, machine washable"
+  },
+  {
     "name": "Pair of Black Shoes",
     "image": "https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "description": "For a business look that is less formal and which can easily transition into casual, the bicycle toe and smooth leather design of the Whiddon Pace Oxfords by Clarks is ideal.\n\nBicycle-toe lace-up Oxfords\nBlind eyelets\nPadded collar; Ortholite; Elastic gore at sides for easy entry\nBuilt with Extreme Comfort Technology\nEnhanced heel cushioning for ultimate support\nTech-wick lining keeps the foot fresh\nSoft EVA strobel layer adds lightweight cushioning\nFull grain leather upper; Textile man-made lining; TPR sole\nWipe clean with a damp cloth\nImported\n",
@@ -268,6 +358,16 @@
     "type": "outer",
     "size and fit": "Approx. model height is 5'7\" and she is wearing a size medium\nApprox. 35-1/2\" long from center back to hem",
     "Materials and care": "Shell: wool/polyester; lining: polyester\nDry clean"
+  },
+  {
+    "name": "Halloween Witch Costume",
+    "image": "https://images.pexels.com/photos/5600064/pexels-photo-5600064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Become a wicked witch this Halloween with our Witch Costume! The costume includes a black dress with attached hood, as well as a pointy hat and a broom. The dress is made of comfortable and lightweight material, making it easy to wear for hours of trick-or-treating. The hat and broom add to the authentic witch look.\n\nThe Witch Costume is perfect for both kids and adults, and is suitable for Halloween parties, trick-or-treating, and other spooky events. Be sure to add some green face paint and a pair of black shoes to complete the look.\n\nThis costume is made of 100% polyester and is machine washable for easy care.",
+    "price": 39.99,
+    "rating": 4.8,
+    "type": "halloween",
+    "size and fit": "One size fits most",
+    "Materials and care": "100% polyester, machine washable"
   },
   {
     "name": " White Blouse",
@@ -308,6 +408,16 @@
     "type": "skirt",
     "size and fit": "Approx. length: 15-1/4\"",
     "Materials and care": "Machine washable\nCotton/spandex"
+  },
+  {
+    "name": "Halloween Frankenstein Costume",
+    "image": "https://images.pexels.com/photos/13682859/pexels-photo-13682859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Become a classic monster this Halloween with our Frankenstein Costume! The costume includes a green jumpsuit with attached shirt and gloves, as well as a Frankenstein mask. The jumpsuit is made of comfortable and lightweight material, making it easy to wear for hours of trick-or-treating. The mask features a creepy Frankenstein face and scars, making it the perfect finishing touch for this spooky costume.\n\nThe Frankenstein Costume is perfect for both kids and adults, and is suitable for Halloween parties, trick-or-treating, and other spooky events. Be sure to add some green face paint and a pair of black shoes to complete the look.\n\nThis costume is made of 100% polyester and is machine washable for easy care.",
+    "price": 49.99,
+    "rating": 4.6,
+    "type": "halloween",
+    "size and fit": "One size fits most",
+    "Materials and care": "100% polyester, machine washable"
   },
   {
     "name": "Soft Blue Jeans",
@@ -360,6 +470,16 @@
     "Materials and care": "N/A"
   },
   {
+    "name": "Halloween Mummy Costume",
+    "image": "https://images.pexels.com/photos/14149416/pexels-photo-14149416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "Become a creepy mummy this Halloween with our Mummy Costume! The costume includes a white jumpsuit with attached gloves and a mummy mask. The jumpsuit is made of comfortable and lightweight material, making it easy to wear for hours of trick-or-treating. The mask features a creepy mummy face and bandages, making it the perfect finishing touch for this spooky costume.\n\nThe Mummy Costume is perfect for both kids and adults, and is suitable for Halloween parties, trick-or-treating, and other spooky events. Be sure to add some white face paint and a pair of white shoes to complete the look.\n\nThis costume is made of 100% polyester and is machine washable for easy care.",
+    "price": 39.99,
+    "rating": 4.7,
+    "type": "halloween",
+    "size and fit": "One size fits most",
+    "Materials and care": "100% polyester, machine washable"
+  },
+  {
     "name": "White Adidas Running Shoes",
     "image": "https://images.pexels.com/photos/1670766/pexels-photo-1670766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "description": "Bring some 1970s tennis style to your everyday look with the adidas Men's Originals Stan Smith Primegreen Casual Sneakers. Designed for court superstar Stan Smith, these clean sneakers have sporty good looks that go perfectly with today's styles.\n\nThese sneakers are made with Primegreen, a series of high-performance recycled materials\nCourt classic casual sneakers\nSupple upper for durability and sleek style\nPerforated 3-stripes branding at sides\nLace closure\nCushioned insole\nTonal rubber sole\nStyle number - FX5502\nMen's athletic footwear from Finish Line\nSynthetic Upper, Rubber Sole\nWipe Clean\nImported\n",
@@ -388,6 +508,16 @@
     "type": "dresses",
     "size and fit": "Regular fit, true to size",
     "Materials and care": "100% cotton,Machine wash cold, tumble dry low"
+  },
+  {
+    "name": "Women's Slim Fit T-Shirt",
+    "image": "https://images.pexels.com/photos/4092054/pexels-photo-4092054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This slim fit t-shirt is made of soft, comfortable cotton and has a modern, feminine cut. It's the perfect top for any casual occasion.\n\nThe shirt features short sleeves, a crew neck, and a straight hem. It's available in a variety of colors, so you can choose the one that best suits your style.\n\nWhether you're running errands or just hanging out at home, this t-shirt is a versatile and stylish choice.\n\nPair it with your favorite jeans or leggings for a casual, laid-back look.",
+    "price": 25,
+    "rating": 4.5,
+    "type": "hae",
+    "size and fit": "Slim fit, fits true to size. Model is wearing size Small.",
+    "Materials and care": "100% cotton. Machine wash cold, tumble dry low."
   },
   {
     "name": "Faux Leather Moto Jacket",
@@ -440,6 +570,16 @@
     "type": "body care",
     "size and fit": "8 oz bottle. External use only.",
     "Materials and care": "100% natural ingredients. Store in a cool, dry place."
+  },
+  {
+    "name": "Casual Shoes",
+    "image": "https://images.pexels.com/photos/4488602/pexels-photo-4488602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "These casual shoes are perfect for everyday wear. They're made of durable, breathable canvas and have a comfortable, cushioned insole.\n\nThe shoes have a lace-up closure and a flexible, non-slip rubber sole. They're available in a variety of colors, so you can choose the one that best matches your style.\n\nWhether you're running errands or just going for a casual stroll, these shoes will keep your feet comfortable and supported.\n\nPair them with your favorite jeans or chinos for a laid-back, stylish look.",
+    "price": 65,
+    "rating": 4.3,
+    "type": "hae",
+    "size and fit": "Fits true to size. Available in sizes 7-12.",
+    "Materials and care": "Canvas upper, rubber sole. Spot clean with a damp cloth."
   },
   {
     "name": "Argan Oil Hair Treatment",
@@ -521,6 +661,41 @@
     "size and fit": "Slim fit, available in sizes S-XL",
     "Materials and care": "100% cotton, machine wash cold"
   },
+
+
+  {
+    "name": "Women's Slim Fit T-Shirt",
+    "image": "https://www.example.com/tshirt.jpg",
+    "description": "This slim fit t-shirt is made of soft, comfortable cotton and has a modern, feminine cut. It's the perfect top for any casual occasion.\n\nThe shirt features short sleeves, a crew neck, and a straight hem. It's available in a variety of colors, so you can choose the one that best suits your style.\n\nWhether you're running errands or just hanging out at home, this t-shirt is a versatile and stylish choice.\n\nPair it with your favorite jeans or leggings for a casual, laid-back look.",
+    "price": 25,
+    "rating": 4.5,
+    "type": "fashion",
+    "size and fit": "Slim fit, fits true to size. Model is wearing size Small.",
+    "Materials and care": "100% cotton. Machine wash cold, tumble dry low."
+  },
+
+  {
+    "name": "Men's Casual Shoes",
+    "image": "https://www.example.com/shoes.jpg",
+    "description": "These casual shoes are perfect for everyday wear. They're made of durable, breathable canvas and have a comfortable, cushioned insole.\n\nThe shoes have a lace-up closure and a flexible, non-slip rubber sole. They're available in a variety of colors, so you can choose the one that best matches your style.\n\nWhether you're running errands or just going for a casual stroll, these shoes will keep your feet comfortable and supported.\n\nPair them with your favorite jeans or chinos for a laid-back, stylish look.",
+    "price": 65,
+    "rating": 4.3,
+    "type": "fashion",
+    "size and fit": "Fits true to size. Available in sizes 7-12.",
+    "Materials and care": "Canvas upper, rubber sole. Spot clean with a damp cloth."
+  },
+
+  {
+    "name": "Stainless Steel Water Bottle",
+    "image": "https://images.pexels.com/photos/10140531/pexels-photo-10140531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This stainless steel water bottle is perfect for staying hydrated on the go. It's made of high-quality, durable stainless steel and has a leak-proof cap.\n\nThe bottle has a capacity of 24 ounces and is insulated to keep your drinks cold for up to 24 hours or hot for up to 12 hours. It's also BPA-free, so you can enjoy your drinks without worrying about chemicals.\n\nThe bottle has a convenient carrying handle and a wide mouth for easy filling and cleaning. It's also dishwasher safe, so it's easy to maintain.\n\nTake this bottle with you to the gym, on a hike, or to work to stay hydrated throughout the day.",
+    "price": 20,
+    "rating": 4.7,
+    "type": "hae",
+    "size and fit": "24 oz capacity, fits standard cup holders.",
+    "Materials and care": "Stainless steel, BPA-free. Dishwasher safe."
+  },
+
   {
     "name": "Aloha Knit Sweater",
     "image": "https://images.pexels.com/photos/6968498/pexels-photo-6968498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -562,6 +737,17 @@
     "size and fit": "Regular fit, available in sizes S-XL",
     "Materials and care": "100% cotton, machine wash cold"
   },
+
+  {
+    "name": "Fitness Tracker Watch",
+    "image": "https://images.pexels.com/photos/7453068/pexels-photo-7453068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "This fitness tracker watch is perfect for tracking your workouts and daily activity. It features a heart rate monitor, step tracker, and calorie tracker to help you stay on track with your fitness goals.\n\nThe watch also has a sleep tracking function to help you understand your sleep patterns and improve your sleep quality. It's water resistant up to 50 meters, so you can wear it while swimming or in the shower.\n\nThe watch has a long battery life and connects to your smartphone via Bluetooth to sync your data and receive notifications. It's available in a variety of colors to suit your style.\n\nWear this watch while working out, running, or just going about your daily activities to track your progress and stay motivated.",
+    "price": 80,
+    "rating": 4.2,
+    "type": "hae",
+    "size and fit": "One size fits all, adjustable strap.",
+    "Materials and care": "Water resistant up to 50 meters. Wipe clean with a damp cloth."
+  },
   {
     "name": "Cute Pineapple Onesie",
     "image": "https://images.pexels.com/photos/3952035/pexels-photo-3952035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -602,6 +788,7 @@
     "size and fit": "True to size",
     "Materials and care": "Exotic leather, rubber sole, lace-up design"
   },
+
   {
     "name": "Exotic Leather Schoolbag",
     "image": "https://images.pexels.com/photos/6648407/pexels-photo-6648407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -612,6 +799,18 @@
     "size and fit": "One size fits all",
     "Materials and care": "Exotic leather, multiple compartments and pockets, padded straps"
   },
+  {
+    "name": "Wireless Bluetooth Headphones",
+    "image": "https://images.pexels.com/photos/7812322/pexels-photo-7812322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "description": "These wireless Bluetooth headphones are perfect for listening to music or taking calls on the go. They have a sleek, compact design that fits comfortably in your ears and a long battery life for all-day use.\n\nThe headphones have a built-in microphone and buttons for controlling music and taking calls. They also have noise-cancelling technology to help block out background noise.\n\nThe headphones are compatible with all Bluetooth-enabled devices and come with a charging case for convenient storage and charging. They're available in a variety of colors to suit your style.\n\nTake these headphones with you to the gym, on a flight, or just on your daily commute to enjoy your music or calls without any distractions.",
+    "price": 100,
+    "rating": 4.6,
+    "type": "hae",
+    "size and fit": "In-ear design, fits most ear sizes.",
+    "Materials and care": "Plastic, silicone. Wipe clean with a damp cloth."
+  },
+
+
   {
     "name": "Exotic Luggage Set",
     "image": "https://images.unsplash.com/photo-1479888230021-c24f136d849f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
@@ -701,6 +900,16 @@
     "type": "dresses",
     "size and fit": "Fit and flare silhouette. True to size. Model is wearing size S.",
     "Materials and care": "100% polyester. Dry clean only."
+  },
+  {
+    "name": "Portable Bluetooth Speaker",
+    "image": "https://images.pexels.com/photos/1706694/pexels-photo-1706694.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "description": "This portable Bluetooth speaker is perfect for listening to music on the go. It has a compact, lightweight design that's easy to take with you anywhere.\n\nThe speaker has powerful, clear sound and a long battery life for all-day use. It's also water resistant, so you can take it to the beach or pool without worrying about it getting damaged.\n\nThe speaker has a built-in microphone and buttons for controlling music and taking calls. It's compatible with all Bluetooth-enabled devices and comes with a carrying case for convenient storage and protection.\n\nTake this speaker with you to the park, on a camping trip, or just around the house to enjoy your music wherever you go.",
+    "price": 50,
+    "rating": 4.4,
+    "type": "hae",
+    "size and fit": "Compact design, fits easily in a backpack or bag.",
+    "Materials and care": "Plastic, silicone. Wipe clean with a damp cloth."
   },
   {
     "name": "Floral Print Cami Top",

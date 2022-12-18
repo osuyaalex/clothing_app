@@ -234,10 +234,8 @@ class _WomenBagHikingState extends State<WomenBagHiking> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                          Icon(Icons.close)
+
                         ],
                       ),
                     ),
@@ -273,10 +271,8 @@ class _WomenBagHikingState extends State<WomenBagHiking> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                          Icon(Icons.close)
+
                         ],
                       ),
                     )

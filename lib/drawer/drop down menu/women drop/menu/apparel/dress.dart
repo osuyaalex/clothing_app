@@ -262,10 +262,8 @@ class _WomanAparelDressState extends State<WomanAparelDress> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                          Icon(Icons.close)
+
                         ],
                       ),
                     ),
@@ -295,16 +293,14 @@ class _WomanAparelDressState extends State<WomanAparelDress> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Blouse',
+                          Text('Dress',
                             style: GoogleFonts.tenorSans(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                           Icon(Icons.close)
+
                         ],
                       ),
                     )

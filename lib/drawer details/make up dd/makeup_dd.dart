@@ -31,6 +31,7 @@ class _MakeUpDrawerDetailsState extends State<MakeUpDrawerDetails> {
   bool _medium = true;
   bool _large = true;
   String _selectedIcon = 'n/s';
+  bool _snackbarShown = false;
   loadCategoryJson () async {
     String data = await DefaultAssetBundle.of(context).loadString("assets/model/category_products.json"); //for calling local json
     final jsonCategoryResult = jsonDecode(data);
@@ -380,6 +381,10 @@ class _MakeUpDrawerDetailsState extends State<MakeUpDrawerDetails> {
             ),
             GestureDetector(
               onTap: (){
+                if (!_snackbarShown) {
+                  snackBar('item successfully added', context);
+                  _snackbarShown = true;
+                }
                 Provider.of<CartProvider>(context, listen: false).getItems.firstWhereOrNull((element) => element.name == widget.results['name']) != null? snackBar('item already added', context)
                     :Provider.of<CartProvider>(context, listen: false).addItem(
                     widget.results['name'],

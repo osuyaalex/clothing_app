@@ -235,10 +235,8 @@ class _WomenShoesHeelsState extends State<WomenShoesHeels> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                          Icon(Icons.close)
+
                         ],
                       ),
                     ),
@@ -274,10 +272,7 @@ class _WomenShoesHeelsState extends State<WomenShoesHeels> {
                                 fontWeight: FontWeight.w300
                             ),
                           ),
-                          IconButton(
-                              onPressed: (){},
-                              icon: Icon(Icons.close)
-                          )
+                           Icon(Icons.close)
                         ],
                       ),
                     )

@@ -209,6 +209,7 @@ class _WomenDressesState extends State<WomenDresses> {
               child: Row(
                 children: [
                   Container(
+
                     height: 40,
                     width: 120,
                     decoration: BoxDecoration(
@@ -237,10 +238,8 @@ class _WomenDressesState extends State<WomenDresses> {
                             fontWeight: FontWeight.w300
                           ),
                         ),
-                        IconButton(
-                            onPressed: (){},
-                            icon: Icon(Icons.close)
-                        )
+                        Icon(Icons.close)
+
                       ],
                     ),
                   ),
@@ -276,10 +275,9 @@ class _WomenDressesState extends State<WomenDresses> {
                               fontWeight: FontWeight.w300
                           ),
                         ),
-                        IconButton(
-                            onPressed: (){},
-                            icon: Icon(Icons.close)
-                        )
+
+                        Icon(Icons.close)
+
                       ],
                     ),
                   )

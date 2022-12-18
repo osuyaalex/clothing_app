@@ -15,7 +15,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'dart:convert';
 import '../tabs/apparel.dart';
-import 'black _screen.dart';
+import 'black content/black _screen.dart';
 
 
 class ExploreCollections extends StatefulWidget {
@@ -65,7 +65,7 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
   final List<Widget> _images = [
     Stack(
       children: [
-        Image.asset('assets/images/image 10.png'),
+        Image.asset('assets/images/image 10.png', width: double.infinity, fit: BoxFit.cover,),
         Padding(
           padding: const EdgeInsets.only(left: 55.0, top: 230),
           child: Text(
@@ -86,16 +86,8 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
         ),
       ],
     ),
-    Stack(
-      children: [
-        Image.asset('assets/images/leeloo.jpeg'),
-      ],
-    ),
-    Stack(
-      children: [
-        Image.asset('assets/images/ayaka.jpeg'),
-      ],
-    ),
+    Image.asset('assets/images/leeloo.jpeg', width: double.infinity, fit: BoxFit.cover,),
+    Image.asset('assets/images/ayaka.jpeg', width: double.infinity,fit: BoxFit.cover,),
   ];
 
   @override
@@ -109,7 +101,7 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
                       CarouselSlider.builder(
                         options: CarouselOptions(
                             viewportFraction: 1,
-                            aspectRatio: 1.8,
+                            aspectRatio: 16/9,
                             height: MediaQuery.of(context).size.height*0.78,
                             autoPlay: false,
                             initialPage: 0,
@@ -127,13 +119,14 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
                               onTap: (){
                                 Navigator.of(context).pushNamedAndRemoveUntil(BlackScreen.routeName, (route) => false);
                               },
-                              child: _images[index]);
+                              child: _images[index],
+                          );
                         },
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 565.0),
-                        child: Center(
-                          child: buildIndicator(),
+                      Center(
+                        child: Align(
+                          alignment: Alignment.bottomCenter,
+                            child: buildIndicator()
                         ),
                       ),
                     ],

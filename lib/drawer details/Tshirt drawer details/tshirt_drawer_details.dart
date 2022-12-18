@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:accordion/accordion.dart';
 import 'package:clothing_app/drawer%20details/Tshirt%20drawer%20details/tshirt_also_like.dart';
-import 'package:clothing_app/drawer%20details/dresser%20drawer%20details/dressers_also_like.dart';
 import 'package:clothing_app/provider/cart_provider.dart';
 import 'package:clothing_app/title.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +30,7 @@ class _TShirtDrawerDetailsState extends State<TShirtDrawerDetails> {
   bool _medium = true;
   bool _large = true;
   String _selectedIcon = 'n/s';
+  bool _snackbarShown = false;
   loadCategoryJson () async {
     String data = await DefaultAssetBundle.of(context).loadString("assets/model/category_products.json"); //for calling local json
     final jsonCategoryResult = jsonDecode(data);
@@ -380,6 +380,10 @@ class _TShirtDrawerDetailsState extends State<TShirtDrawerDetails> {
             ),
             GestureDetector(
               onTap: (){
+                if (!_snackbarShown) {
+                  snackBar('item successfully added', context);
+                  _snackbarShown = true;
+                }
                 Provider.of<CartProvider>(context, listen: false).getItems.firstWhereOrNull((element) => element.name == widget.results['name']) != null? snackBar('item already added', context)
                     :Provider.of<CartProvider>(context, listen: false).addItem(
                     widget.results['name'],
