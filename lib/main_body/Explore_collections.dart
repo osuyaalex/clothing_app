@@ -123,12 +123,14 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
                           );
                         },
                       ),
-                      Center(
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                            child: buildIndicator()
-                        ),
-                      ),
+                      // Center(
+                      //   child: Positioned(
+                      //     child: Align(
+                      //       alignment: Alignment.bottomCenter,
+                      //         child: buildIndicator()
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                   SvgPicture.asset('assets/images/Title.svg'),

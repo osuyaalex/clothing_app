@@ -8,6 +8,7 @@ import '../../../drawer/explore_collections_drawer.dart';
 import '../../../title.dart';
 import '../../cart.dart';
 import '../black/black_collection.dart';
+import '../hae/hae_collection.dart';
 import 'october_grid.dart';
 
 class OctoberCollections extends StatefulWidget {
@@ -178,7 +179,14 @@ class _OctoberCollectionsState extends State<OctoberCollections> {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Image.asset('assets/images/image 22.png'),
+                        GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return HaeCollections();
+                              }));
+                            },
+                            child: Image.asset('assets/images/image 22.png')
+                        ),
                         Padding(
                           padding: const EdgeInsets.only(top: 18.0, right: 105),
                           child: Align(
@@ -195,7 +203,13 @@ class _OctoberCollectionsState extends State<OctoberCollections> {
                   )
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height:80 ,
+            ),
+            SvgPicture.asset('assets/iconImages/Footer.svg',
+              width: MediaQuery.of(context).size.width,
+            ),
           ],
         ),
       ),

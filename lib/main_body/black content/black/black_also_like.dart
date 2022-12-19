@@ -3,16 +3,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
-import 'drewer_details.dart';
+import 'black_details.dart';
 
-class AlsoLike extends StatelessWidget {
+
+
+class BlackAlsoLike extends StatelessWidget {
   final AsyncSnapshot snapshot;
-  const AlsoLike({Key? key, required this.snapshot}) : super(key: key);
+  const BlackAlsoLike({Key? key, required this.snapshot}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     List products = snapshot.data;
-    List product = products.where((element) => element['type'] =='dresses').toList();
+    List product = products.where((element) => element['type'] =='black').toList();
     product.shuffle();
     return StaggeredGridView.countBuilder(
         physics: NeverScrollableScrollPhysics(),
@@ -24,7 +26,7 @@ class AlsoLike extends StatelessWidget {
           return GestureDetector(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context){
-                return DrawerDetails(results: product[index]);
+                return BlackDrawerDetails(results: product[index]);
               }));
             },
             child: Padding(

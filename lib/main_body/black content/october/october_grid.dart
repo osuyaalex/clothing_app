@@ -1,3 +1,4 @@
+import 'package:clothing_app/main_body/black%20content/october/october_drawer_details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
@@ -25,13 +26,20 @@ class OctoberGrid extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                Container(
-                  height: 250,
-                  width: 250,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: NetworkImage(product[index]['image']),
-                    )
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return OctoberDrawerDetails(results: product[index]);
+                    }));
+                  },
+                  child: Container(
+                    height: 250,
+                    width: 250,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(product[index]['image']),
+                      )
+                    ),
                   ),
                 ),
                 Padding(

@@ -2,11 +2,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
 import '../../../drawer/explore_collections_drawer.dart';
 import '../../../title.dart';
 import '../../cart.dart';
+import '../hae/hae_collection.dart';
 import '../october/october_collection.dart';
 import 'black_grid.dart';
 
@@ -97,7 +99,14 @@ class _BlackCollectionsState extends State<BlackCollections> {
                       alignment: Alignment.bottomCenter,
                       child: Padding(
                         padding: const EdgeInsets.only(top: 40.0, left: 30),
-                        child: SvgPicture.asset('assets/iconImages/October.svg'),
+                        child:  Text('Black',
+                          style: GoogleFonts.italianno(
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 45,
+                              color: Colors.white
+                          ),
+                        ),
                       )
                   ),
                 ),
@@ -178,7 +187,13 @@ class _BlackCollectionsState extends State<BlackCollections> {
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        Image.asset('assets/images/image 22.png'),
+                        GestureDetector(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return HaeCollections();
+                              }));
+                            },
+                            child: Image.asset('assets/images/image 22.png')),
                         Padding(
                           padding: const EdgeInsets.only(top: 18.0, right: 105),
                           child: Align(
@@ -195,7 +210,13 @@ class _BlackCollectionsState extends State<BlackCollections> {
                   )
                 ],
               ),
-            )
+            ),
+            const SizedBox(
+              height:80 ,
+            ),
+            SvgPicture.asset('assets/iconImages/Footer.svg',
+              width: MediaQuery.of(context).size.width,
+            ),
           ],
         ),
       ),

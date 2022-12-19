@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
+import 'black_details.dart';
+
 class BlackGrid extends StatelessWidget {
   final AsyncSnapshot snapshot;
   const BlackGrid({Key? key, required this.snapshot}) : super(key: key);
@@ -25,13 +27,20 @@ class BlackGrid extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Container(
-                    height: 250,
-                    width: 250,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(product[index]['image']),
-                        )
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return BlackDrawerDetails(results: product[index]);
+                      }));
+                    },
+                    child: Container(
+                      height: 250,
+                      width: 250,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(product[index]['image']),
+                          )
+                      ),
                     ),
                   ),
                   Padding(

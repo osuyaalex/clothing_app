@@ -6,6 +6,7 @@ import 'package:page_transition/page_transition.dart';
 import '../../drawer/explore_collections_drawer.dart';
 import '../cart.dart';
 import 'black/black_collection.dart';
+import 'hae/hae_collection.dart';
 import 'october/october_collection.dart';
 
 class BlackScreen extends StatelessWidget {
@@ -158,7 +159,13 @@ class BlackScreen extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
-            Image.asset('assets/images/image 22.png'),
+            GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return HaeCollections();
+                  }));
+                },
+                child: Image.asset('assets/images/image 22.png')),
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: Row(
