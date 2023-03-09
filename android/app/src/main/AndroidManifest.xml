@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.clothing_app">
+    package="com.osuyaalex.clothing_app">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="Open Fashion"
