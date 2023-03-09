@@ -379,7 +379,7 @@ class _WomanApparelKnitWearState extends State<WomanApparelKnitWear> {
                               ),
                               Align(
                                 alignment: Alignment.centerLeft,
-                                child: Text('\$${results[index]['price'].toString()}',
+                                child: Text('N${results[index]['price'].toString()}',
                                   style: GoogleFonts.tenorSans(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 17,
@@ -438,7 +438,7 @@ class _WomanApparelKnitWearState extends State<WomanApparelKnitWear> {
                               const SizedBox(
                                 height: 7,
                               ),
-                              Text('\$${results[index]['price'].toString()}',
+                              Text('N${results[index]['price'].toString()}',
                                 style: GoogleFonts.tenorSans(
                                     color: Colors.orange,
                                     fontSize: 18

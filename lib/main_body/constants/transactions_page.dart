@@ -1,10 +1,12 @@
-import 'package:clothing_app/main_body/constants/network.dart';
+import 'package:clothing_app/main_body/constants/networks/network.dart';
 import 'package:clothing_app/main_body/constants/transaction_body.dart';
+import 'package:clothing_app/main_body/constants/transaction_total.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'model.dart';
+
+import 'models/model.dart';
 
 class TransactionsPage extends StatefulWidget {
   const TransactionsPage({Key? key}) : super(key: key);
@@ -20,12 +22,11 @@ class _TransactionsPageState extends State<TransactionsPage> {
   void initState() {
     // TODO: implement initState
     _allTransactions = Network().getTransactions();
-    
-    _allTransactions.then((value){
-      print('The amountttttttt isssssss ${value}');
-    });
     super.initState();
   }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,11 +43,12 @@ class _TransactionsPageState extends State<TransactionsPage> {
               const SizedBox(
                 width: 40,
               ),
-              Text('Transaction Receipt',
-                style: GoogleFonts.redHatDisplay(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black
+
+                 Text('Transaction Receipt',
+                  style: GoogleFonts.redHatDisplay(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black
                 ),
               )
             ],
@@ -54,25 +56,29 @@ class _TransactionsPageState extends State<TransactionsPage> {
         ),
       ),
       body: SingleChildScrollView(
-        child: FutureBuilder(
-          future: _allTransactions,
-            builder: (context, snapshot){
-            if(!snapshot.hasData){
-              return Container();
-            }
-            if(snapshot.hasError){
-              return Text('Error: ${snapshot.error}');
-            }
-            if(snapshot.hasData){
-              return Column(
-                children: [
-                  TransactionBody(snapshot:snapshot),
-                ],
-              );
-            }else{
-              return CircularProgressIndicator(color: Colors.black,);
-            }
-            }
+        child: Column(
+          children: [
+            FutureBuilder(
+              future: _allTransactions,
+                builder: (context, snapshot){
+                if(!snapshot.hasData){
+                  return Container();
+                }
+                if(snapshot.connectionState == ConnectionState.waiting){
+                  return CircularProgressIndicator(color: Colors.black,);
+                }
+                if(snapshot.hasError){
+                  return Text('Error: ${snapshot.error}');
+                }
+                if(snapshot.hasData){
+                  return TransactionBody(snapshot:snapshot);
+                }else{
+                  return CircularProgressIndicator(color: Colors.black,);
+                }
+                }
+            ),
+            TransactionTotals()
+          ],
         ),
       ),
     );

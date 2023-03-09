@@ -1,17 +1,14 @@
 import 'dart:convert';
 
+import 'package:clothing_app/main_body/constants/models/transaction_total_model.dart';
 import 'package:http/http.dart' as http;
 
-import 'model.dart';
-
-
-
-class Network{
-  Future<Transaction> getTransactions() async {
+class Networks{
+  Future<TransactionTotal> getTransactionTotal() async {
     var jsonResponse;
     try {
       final String apiKey = 'sk_test_d0d545083aa89e098b27f1a9cd113cef01e08969';
-      final String url = 'https://api.paystack.co/transaction';
+      final String url = 'https://api.paystack.co/transaction/totals';
       final response = await http.get(Uri.parse('$url'), headers: {
         'Authorization': 'Bearer $apiKey',
         'Content-Type': 'application/json',
@@ -28,7 +25,7 @@ class Network{
       print(error.toString());
     }
 
-    return Transaction.fromJson(jsonResponse);
+    return TransactionTotal.fromJson(jsonResponse);
 
 
   }

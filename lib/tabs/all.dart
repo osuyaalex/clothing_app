@@ -26,7 +26,6 @@ class _AllState extends State<All> {
         crossAxisCount: 2,
         physics:const NeverScrollableScrollPhysics() ,
         itemCount: 4,
-
           itemBuilder: (BuildContext ctx, index){
           return Padding(
             padding: const EdgeInsets.all(8.0),
