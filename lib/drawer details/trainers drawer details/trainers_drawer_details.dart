@@ -124,7 +124,7 @@ class _TrainersDrawerDetailsState extends State<TrainersDrawerDetails> {
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: const EdgeInsets.only(left:25.0, top: 12),
-                child: Text('\$${widget.results['price'].toString()}',
+                child: Text('N${widget.results['price'].toString()}',
                   style: GoogleFonts.tenorSans(
                       fontWeight: FontWeight.w500,
                       fontSize: 15,

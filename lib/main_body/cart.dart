@@ -164,7 +164,7 @@ class _CartState extends State<Cart> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 13.0),
-                                      child: Text('\$${cartProvider.getItems[index].price.toStringAsFixed(2)}',
+                                      child: Text('N${cartProvider.getItems[index].price.toStringAsFixed(2)}',
                                         style: GoogleFonts.tenorSans(
                                           fontSize: 14,
                                           color: Colors.orange

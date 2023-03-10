@@ -91,7 +91,7 @@ class _KnitWearAlsoLikeState extends State<KnitWearAlsoLike> {
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('\$${product[index]['price'].toString()}',
+                    child: Text('N${product[index]['price'].toString()}',
                       style: GoogleFonts.tenorSans(
                           fontWeight: FontWeight.w500,
                           fontSize: 17,
