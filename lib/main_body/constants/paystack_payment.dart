@@ -60,7 +60,6 @@ class MakePayment{
        );
 
        if(response.status == true){
-
          snackBar('Transaction Successful', context);
        }else{
          snackBar('Transaction Failed', context);

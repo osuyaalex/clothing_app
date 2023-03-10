@@ -202,7 +202,27 @@ class _CartState extends State<Cart> {
                         ],
                       ),
                     ),
-                    SvgPicture.asset('assets/iconImages/shipcharge.svg')
+                    SvgPicture.asset('assets/iconImages/shipcharge.svg'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+
+                            onPressed: (){
+                              Provider.of<CartProvider>(context, listen: false).clearCart();
+                            },
+                            style: TextButton.styleFrom(
+                                foregroundColor: Colors.red
+                            ),
+                            child: Text(
+                              'Clear Cart',
+                              style: GoogleFonts.tenorSans(
+                                fontWeight: FontWeight.w500
+                              ),
+                            )
+                        )
+                      ],
+                    )
                   ],
                 );
               }
@@ -323,9 +343,12 @@ class _CartState extends State<Cart> {
                       GestureDetector(
                         onTap: (){
                          if(_globalKey.currentState!.validate()){
-                           MakePayment(context, double.parse(Provider.of<CartProvider>(context, listen: false).totalPrice.toString()), _email, _firstname, _lastName, _phoneNumber, _currentDate, _name).chargeCardAndMakePayment();
+                           MakePayment(context, double.parse(Provider.of<CartProvider>(context, listen: false).totalPrice.toString()), _email, _firstname, _lastName, _phoneNumber, _currentDate, _name).chargeCardAndMakePayment().
+                          whenComplete((){
+                            _globalKey.currentState!.reset();
+                            Provider.of<CartProvider>(context, listen: false).clearCart();
+                           });
                          }
-                         Navigator.pop(context);
                         },
                         child: Container(
                           height: 50,
