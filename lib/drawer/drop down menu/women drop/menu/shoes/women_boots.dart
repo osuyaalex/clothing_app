@@ -114,15 +114,20 @@ class _WomenShoesBootsState extends State<WomenShoesBoots> {
                         width: 100,
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton2(
-                              iconOnClick: SvgPicture.asset('assets/iconImages/Back.svg'),
-                              //dropdownOverButton: true,
-                              buttonPadding: EdgeInsets.symmetric(horizontal: 13),
-                              buttonDecoration: BoxDecoration(
-                                  color: Colors.grey.shade200,
-                                  borderRadius: BorderRadius.circular(20)
+                              buttonStyleData: ButtonStyleData(
+                                padding: EdgeInsets.symmetric(horizontal: 13),
+                                decoration: BoxDecoration(
+                                    color: Colors.grey.shade200,
+                                    borderRadius: BorderRadius.circular(20)
+                                ),
+                              ),
+                              iconStyleData: IconStyleData(
+                                icon:  SvgPicture.asset('assets/iconImages/Forward.svg'),
+                              ),
+                              dropdownStyleData: DropdownStyleData(
+                                  elevation: 0
                               ),
                               alignment: AlignmentDirectional.topStart,
-                              dropdownElevation: 0,
                               isDense: true,
                               style: GoogleFonts.tenorSans(
                                   fontSize: 15,
@@ -131,7 +136,6 @@ class _WomenShoesBootsState extends State<WomenShoesBoots> {
                               //menuMaxHeight: MediaQuery.of(context).size.height,
                               isExpanded: true,
                               value: _newItem,
-                              icon: SvgPicture.asset('assets/iconImages/Forward.svg'),
                               items: shoes.map<DropdownMenuItem>((value){
                                 return DropdownMenuItem(
                                   value: value,

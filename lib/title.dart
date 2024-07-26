@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
 
+import 'linking.dart';
 import 'main_body/cart.dart';
 
 class TitleHome extends StatelessWidget {

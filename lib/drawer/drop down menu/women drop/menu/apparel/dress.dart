@@ -117,15 +117,18 @@ class _WomanAparelDressState extends State<WomanAparelDress> {
                         width: 100,
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton2(
-                              iconOnClick: SvgPicture.asset('assets/iconImages/Back.svg'),
-                              //dropdownOverButton: true,
-                              buttonPadding: EdgeInsets.symmetric(horizontal: 13),
-                              buttonDecoration: BoxDecoration(
-                                  color: Colors.grey.shade200,
-                                  borderRadius: BorderRadius.circular(20)
+                              buttonStyleData: ButtonStyleData(
+                                  padding: EdgeInsets.symmetric(horizontal: 13),
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey.shade200,
+                                      borderRadius: BorderRadius.circular(20)
+                                  ),
+                                  elevation: 0
+                              ),
+                              iconStyleData: IconStyleData(
+                                icon:  SvgPicture.asset('assets/iconImages/Forward.svg'),
                               ),
                               alignment: AlignmentDirectional.topStart,
-                              dropdownElevation: 0,
                               isDense: true,
                               style: GoogleFonts.tenorSans(
                                   fontSize: 15,
@@ -134,7 +137,6 @@ class _WomanAparelDressState extends State<WomanAparelDress> {
                               //menuMaxHeight: MediaQuery.of(context).size.height,
                               isExpanded: true,
                               value: _newItem,
-                              icon: SvgPicture.asset('assets/iconImages/Forward.svg'),
                               items: apparel.map<DropdownMenuItem>((value){
                                 return DropdownMenuItem(
                                   value: value,

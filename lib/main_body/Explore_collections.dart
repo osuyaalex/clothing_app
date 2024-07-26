@@ -144,6 +144,7 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
                         return Column(
                             children: [
                               TabBar(
+
                                   indicator: CircleTabIndicator(
                                       color: Colors.redAccent, radius: 3),
                                   tabs: [
@@ -485,7 +486,7 @@ class _ExploreCollectionsState extends State<ExploreCollections> {
             );
           }
 
-  Widget buildIndicator(){
+  Widget _buildIndicator(){
     return AnimatedSmoothIndicator(
         activeIndex: _activeIndex,
         count: _images.length,

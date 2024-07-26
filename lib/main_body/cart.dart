@@ -24,7 +24,6 @@ class _CartState extends State<Cart> {
   dynamic _name;
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: const Color(0xffE7EAEF),
            appBar: AppBar(
@@ -82,7 +81,6 @@ class _CartState extends State<Cart> {
           padding: const EdgeInsets.all(8.0),
           child: Consumer<CartProvider>(
               builder: (context, cartProvider, child){
-
                 return Column(
                   children: [
                     Container(
